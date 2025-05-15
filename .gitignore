@@ -1,2 +1,4 @@
 .env
 neo4j.txt
+**/venv/
+**/__pycache__/

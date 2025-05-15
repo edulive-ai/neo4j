@@ -2,6 +2,8 @@ import os
 import logging
 from neo4j import GraphDatabase
 from dotenv import load_dotenv
+import random
+from datetime import datetime, timedelta
 
 # Cấu hình logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -21,102 +23,135 @@ if not all([NEO4J_URI, NEO4J_USERNAME, NEO4J_PASSWORD]):
     exit()
 
 # Các câu lệnh Cypher để tạo dữ liệu
-# Được chia thành các khối logic
 CYPHER_QUERIES = [
     # --- 0. Dọn dẹp dữ liệu cũ (TÙY CHỌN - bỏ comment nếu muốn xóa sạch DB trước) ---
-    # """
-    # MATCH (n) DETACH DELETE n;
-    # """,
-
+    """
+    MATCH (n) DETACH DELETE n;
+    """,
     # --- 1. Tạo Môn học ---
     """
-    CREATE (toan1:Subject {name: "Toán Lớp 1", grade: 1, description: "Môn Toán dành cho học sinh lớp 1."});
+    
+    CREATE (toan1:Subject {
+        name: "Toán Lớp 1",
+        grade: 1,
+        description: "Môn Toán dành cho học sinh lớp 1 theo chương trình mới"
+    });
     """,
 
     # --- 2. Tạo Học sinh ---
     """
-    CREATE (an:Student {studentId: "HS001", name: "Nguyễn Văn An", dob: date("2018-05-10")});
-    CREATE (binh:Student {studentId: "HS002", name: "Trần Thị Bình", dob: date("2018-07-22")});
-    CREATE (cuong:Student {studentId: "HS003", name: "Lê Minh Cường", dob: date("2018-03-15")});
+    CREATE (hs1:Student {studentId: "HS001", name: "Nguyễn Văn An", dob: date("2018-05-10")});
+    CREATE (hs2:Student {studentId: "HS002", name: "Trần Thị Bình", dob: date("2018-07-22")});
+    CREATE (hs3:Student {studentId: "HS003", name: "Lê Minh Cường", dob: date("2018-03-15")});
+    CREATE (hs4:Student {studentId: "HS004", name: "Phạm Thị Dung", dob: date("2018-09-30")});
+    CREATE (hs5:Student {studentId: "HS005", name: "Hoàng Văn Em", dob: date("2018-11-05")});
+    CREATE (hs6:Student {studentId: "HS006", name: "Đỗ Thị Gấm", dob: date("2018-04-18")});
+    CREATE (hs7:Student {studentId: "HS007", name: "Vũ Minh Hùng", dob: date("2018-06-25")});
+    CREATE (hs8:Student {studentId: "HS008", name: "Lý Thị Hương", dob: date("2018-08-12")});
+    CREATE (hs9:Student {studentId: "HS009", name: "Trịnh Văn Khoa", dob: date("2018-10-20")});
+    CREATE (hs10:Student {studentId: "HS010", name: "Bùi Thị Lan", dob: date("2018-12-15")});
     """,
 
-    # --- 3. Tạo mối quan hệ Học sinh ĐĂNG KÝ Môn học ---
+    # --- 3. Tạo các Chương học ---
     """
     MATCH (s:Subject {name: "Toán Lớp 1"})
-    MATCH (hs_an:Student {studentId: "HS001"})
-    MATCH (hs_binh:Student {studentId: "HS002"})
-    MATCH (hs_cuong:Student {studentId: "HS003"})
-    CREATE (hs_an)-[:ENROLLED_IN {enrollmentDate: date()}]->(s);
-    CREATE (hs_binh)-[:ENROLLED_IN {enrollmentDate: date()}]->(s);
-    CREATE (hs_cuong)-[:ENROLLED_IN {enrollmentDate: date()}]->(s);
+    CREATE (c1:Chapter {chapterId: "C1", name: "Số và phép tính", order: 1})-[:BELONGS_TO]->(s);
+    CREATE (c2:Chapter {chapterId: "C2", name: "Hình học", order: 2})-[:BELONGS_TO]->(s);
+    CREATE (c3:Chapter {chapterId: "C3", name: "Đo lường", order: 3})-[:BELONGS_TO]->(s);
     """,
 
-    # --- 4. Tạo các Câu hỏi cho Môn học ---
+    # --- 4. Tạo các Bài học trong Chương 1: Số và phép tính ---
+    """
+    MATCH (c:Chapter {chapterId: "C1"})
+    CREATE (b1:Lesson {lessonId: "L1.1", name: "Các số từ 0 đến 10", order: 1})-[:BELONGS_TO]->(c);
+    CREATE (b2:Lesson {lessonId: "L1.2", name: "Phép cộng trong phạm vi 10", order: 2})-[:BELONGS_TO]->(c);
+    CREATE (b3:Lesson {lessonId: "L1.3", name: "Phép trừ trong phạm vi 10", order: 3})-[:BELONGS_TO]->(c);
+    """,
+
+    # --- 5. Tạo các Bài học trong Chương 2: Hình học ---
+    """
+    MATCH (c:Chapter {chapterId: "C2"})
+    CREATE (b4:Lesson {lessonId: "L2.1", name: "Điểm và đoạn thẳng", order: 1})-[:BELONGS_TO]->(c);
+    CREATE (b5:Lesson {lessonId: "L2.2", name: "Hình vuông, hình tròn", order: 2})-[:BELONGS_TO]->(c);
+    CREATE (b6:Lesson {lessonId: "L2.3", name: "Hình tam giác, hình chữ nhật", order: 3})-[:BELONGS_TO]->(c);
+    """,
+
+    # --- 6. Tạo các Bài học trong Chương 3: Đo lường ---
+    """
+    MATCH (c:Chapter {chapterId: "C3"})
+    CREATE (b7:Lesson {lessonId: "L3.1", name: "Đo độ dài", order: 1})-[:BELONGS_TO]->(c);
+    CREATE (b8:Lesson {lessonId: "L3.2", name: "Đo thời gian", order: 2})-[:BELONGS_TO]->(c);
+    """,
+
+    # --- 7. Tạo các Câu hỏi cho Bài 1: Các số từ 0 đến 10 ---
+    """
+    MATCH (b:Lesson {lessonId: "L1.1"})
+    CREATE (q1:Question {
+        questionId: "Q1.1.1",
+        text: "Số liền sau của số 5 là số mấy?",
+        type: "multiple_choice",
+        difficulty: "easy"
+    })-[:BELONGS_TO]->(b);
+    
+    CREATE (q2:Question {
+        questionId: "Q1.1.2",
+        text: "Điền số thích hợp vào chỗ trống: 3 < ... < 5",
+        type: "fill_blank",
+        difficulty: "easy"
+    })-[:BELONGS_TO]->(b);
+    
+    CREATE (q3:Question {
+        questionId: "Q1.1.3",
+        text: "Số 7 lớn hơn số 5. Đúng hay sai?",
+        type: "true_false",
+        difficulty: "easy"
+    })-[:BELONGS_TO]->(b);
+    """,
+
+    # --- 8. Tạo đáp án cho các câu hỏi ---
+    """
+    // Đáp án cho Q1.1.1
+    MATCH (q:Question {questionId: "Q1.1.1"})
+    CREATE (a1:Answer {answerId: "A1.1.1.1", text: "6", isCorrect: true});
+    CREATE (a2:Answer {answerId: "A1.1.1.2", text: "4", isCorrect: false});
+    CREATE (a3:Answer {answerId: "A1.1.1.3", text: "7", isCorrect: false});
+    CREATE (q)-[:HAS_OPTION]->(a1);
+    CREATE (q)-[:HAS_OPTION]->(a2);
+    CREATE (q)-[:HAS_OPTION]->(a3);
+    CREATE (q)-[:CORRECT_ANSWER_IS]->(a1);
+
+    // Đáp án cho Q1.1.2
+    MATCH (q:Question {questionId: "Q1.1.2"})
+    CREATE (a4:Answer {answerId: "A1.1.2.1", text: "4", isCorrect: true});
+    CREATE (q)-[:CORRECT_ANSWER_IS]->(a4);
+
+    // Đáp án cho Q1.1.3
+    MATCH (q:Question {questionId: "Q1.1.3"})
+    CREATE (a5:Answer {answerId: "A1.1.3.1", text: "Đúng", isCorrect: true});
+    CREATE (a6:Answer {answerId: "A1.1.3.2", text: "Sai", isCorrect: false});
+    CREATE (q)-[:HAS_OPTION]->(a5);
+    CREATE (q)-[:HAS_OPTION]->(a6);
+    CREATE (q)-[:CORRECT_ANSWER_IS]->(a5);
+    """,
+
+    # --- 9. Tạo kết quả làm bài của học sinh ---
+    """
+    MATCH (hs:Student {studentId: "HS001"})
+    MATCH (q:Question {questionId: "Q1.1.1"})
+    MATCH (a:Answer {answerId: "A1.1.1.1"})
+    CREATE (hs)-[attempt:ATTEMPTED_QUESTION {
+        timestamp: datetime(),
+        score: 10,
+        feedback: "Làm đúng"
+    }]->(q);
+    CREATE (attempt)-[:SELECTED_ANSWER]->(a);
+    """,
+
+    # --- 10. Tạo mối quan hệ Học sinh ĐĂNG KÝ Môn học ---
     """
     MATCH (s:Subject {name: "Toán Lớp 1"})
-    CREATE (q1:Question {questionId: "Q001", text: "1 + 1 = ?", difficulty: "Dễ", topic: "Phép cộng"})-[:BELONGS_TO]->(s);
-    CREATE (q2:Question {questionId: "Q002", text: "Hình vuông có mấy cạnh?", difficulty: "Trung bình", topic: "Hình học"})-[:BELONGS_TO]->(s);
-    CREATE (q3:Question {questionId: "Q003", text: "Số liền sau của số 5 là số mấy?", difficulty: "Dễ", topic: "Dãy số"})-[:BELONGS_TO]->(s);
-    """,
-
-    # --- 5. Tạo các Câu trả lời cho từng Câu hỏi ---
-    """
-    // Câu trả lời cho Câu hỏi Q001
-    MATCH (cauhoi1:Question {questionId: "Q001"})
-    CREATE (ans1_1:Answer {answerId: "A001_1", text: "2", isCorrect: true});
-    CREATE (ans1_2:Answer {answerId: "A001_2", text: "1", isCorrect: false});
-    CREATE (ans1_3:Answer {answerId: "A001_3", text: "3", isCorrect: false});
-    CREATE (cauhoi1)-[:HAS_OPTION]->(ans1_1);
-    CREATE (cauhoi1)-[:HAS_OPTION]->(ans1_2);
-    CREATE (cauhoi1)-[:HAS_OPTION]->(ans1_3);
-    CREATE (cauhoi1)-[:CORRECT_ANSWER_IS]->(ans1_1);
-
-    // Câu trả lời cho Câu hỏi Q002
-    MATCH (cauhoi2:Question {questionId: "Q002"})
-    CREATE (ans2_1:Answer {answerId: "A002_1", text: "4 cạnh", isCorrect: true});
-    CREATE (ans2_2:Answer {answerId: "A002_2", text: "3 cạnh", isCorrect: false});
-    CREATE (ans2_3:Answer {answerId: "A002_3", text: "5 cạnh", isCorrect: false});
-    CREATE (cauhoi2)-[:HAS_OPTION]->(ans2_1);
-    CREATE (cauhoi2)-[:HAS_OPTION]->(ans2_2);
-    CREATE (cauhoi2)-[:HAS_OPTION]->(ans2_3);
-    CREATE (cauhoi2)-[:CORRECT_ANSWER_IS]->(ans2_1);
-
-    // Câu trả lời cho Câu hỏi Q003
-    MATCH (cauhoi3:Question {questionId: "Q003"})
-    CREATE (ans3_1:Answer {answerId: "A003_1", text: "Số 4", isCorrect: false});
-    CREATE (ans3_2:Answer {answerId: "A003_2", text: "Số 6", isCorrect: true});
-    CREATE (ans3_3:Answer {answerId: "A003_3", text: "Số 5", isCorrect: false});
-    CREATE (cauhoi3)-[:HAS_OPTION]->(ans3_1);
-    CREATE (cauhoi3)-[:HAS_OPTION]->(ans3_2);
-    CREATE (cauhoi3)-[:HAS_OPTION]->(ans3_3);
-    CREATE (cauhoi3)-[:CORRECT_ANSWER_IS]->(ans3_2);
-    """,
-
-    # --- 6. Tạo mối quan hệ Học sinh LÀM Câu hỏi và CHỌN Câu trả lời ---
-    """
-    MATCH (hs_an:Student {studentId: "HS001"})
-    MATCH (hs_binh:Student {studentId: "HS002"})
-    MATCH (q1:Question {questionId: "Q001"})
-    MATCH (q2:Question {questionId: "Q002"})
-    MATCH (ans_q1_an:Answer {answerId: "A001_1"})
-    MATCH (ans_q1_binh:Answer {answerId: "A001_3"})
-    MATCH (ans_q2_an:Answer {answerId: "A002_1"})
-
-    // An làm câu Q001
-    CREATE (hs_an)-[attempt1_an:ATTEMPTED_QUESTION {timestamp: datetime(), score: 10}]->(q1);
-    CREATE (attempt1_an)-[:SELECTED_ANSWER]->(ans_q1_an);
-
-    // Bình làm câu Q001
-    CREATE (hs_binh)-[attempt1_binh:ATTEMPTED_QUESTION {timestamp: datetime(), score: 0}]->(q1);
-    CREATE (attempt1_binh)-[:SELECTED_ANSWER]->(ans_q1_binh);
-
-    // An làm câu Q002
-    CREATE (hs_an)-[attempt2_an:ATTEMPTED_QUESTION {timestamp: datetime(), score: 10}]->(q2);
-    CREATE (attempt2_an)-[:SELECTED_ANSWER]->(ans_q2_an);
-    """,
-    # --- Hoàn tất ---
-    """
-    RETURN "Tạo dữ liệu mẫu thành công!" AS message;
+    MATCH (hs:Student)
+    CREATE (hs)-[:ENROLLED_IN {enrollmentDate: date()}]->(s);
     """
 ]
 
@@ -132,12 +167,89 @@ class Neo4jDataCreator:
             logging.info(f"Đã kết nối thành công tới Neo4j tại: {self.uri}")
         except Exception as e:
             logging.error(f"Lỗi kết nối Neo4j: {e}")
-            self.driver = None # Đảm bảo driver là None nếu kết nối thất bại
+            self.driver = None
 
-    def close(self):
-        if self.driver:
-            self.driver.close()
-            logging.info("Đã đóng kết nối Neo4j.")
+    def create_student_learning_data(self):
+        """Tạo dữ liệu học tập cho học sinh"""
+        if not self.driver:
+            logging.error("Không có kết nối driver. Không thể tạo dữ liệu.")
+            return
+
+        try:
+            with self.driver.session() as session:
+                # Lấy danh sách học sinh
+                students = session.run("MATCH (s:Student) RETURN s.studentId as id").data()
+                
+                # Lấy danh sách bài học
+                lessons = session.run("MATCH (l:Lesson) RETURN l.lessonId as id").data()
+                
+                # Lấy danh sách câu hỏi
+                questions = session.run("MATCH (q:Question) RETURN q.questionId as id").data()
+
+                # Tạo dữ liệu học tập cho mỗi học sinh
+                for student in students:
+                    student_id = student['id']
+                    
+                    # Tạo tiến độ học tập cho mỗi bài học
+                    for lesson in lessons:
+                        lesson_id = lesson['id']
+                        
+                        # Tạo ngẫu nhiên thời gian học
+                        study_time = datetime.now() - timedelta(days=random.randint(1, 30))
+                        
+                        # Tạo mối quan hệ học sinh đã học bài
+                        session.run("""
+                            MATCH (s:Student {studentId: $student_id})
+                            MATCH (l:Lesson {lessonId: $lesson_id})
+                            MERGE (s)-[r:STUDIED]->(l)
+                            SET r.studyTime = $study_time,
+                                r.completionStatus = $status,
+                                r.score = $score
+                        """, {
+                            'student_id': student_id,
+                            'lesson_id': lesson_id,
+                            'study_time': study_time,
+                            'status': random.choice(['completed', 'in_progress']),
+                            'score': random.randint(0, 100)
+                        })
+
+                        # Tạo kết quả làm bài cho mỗi câu hỏi
+                        for question in questions:
+                            question_id = question['id']
+                            
+                            # Lấy đáp án đúng của câu hỏi
+                            correct_answer = session.run("""
+                                MATCH (q:Question {questionId: $question_id})-[:CORRECT_ANSWER_IS]->(a:Answer)
+                                RETURN a.answerId as answer_id
+                            """, {'question_id': question_id}).single()
+                            
+                            if correct_answer:
+                                # Tạo ngẫu nhiên kết quả làm bài
+                                is_correct = random.choice([True, False])
+                                attempt_time = study_time + timedelta(minutes=random.randint(1, 60))
+                                
+                                # Tạo mối quan hệ học sinh làm câu hỏi
+                                session.run("""
+                                    MATCH (s:Student {studentId: $student_id})
+                                    MATCH (q:Question {questionId: $question_id})
+                                    MATCH (a:Answer {answerId: $answer_id})
+                                    MERGE (s)-[r:ATTEMPTED_QUESTION]->(q)
+                                    SET r.timestamp = $attempt_time,
+                                        r.score = $score,
+                                        r.feedback = $feedback
+                                    MERGE (r)-[:SELECTED_ANSWER]->(a)
+                                """, {
+                                    'student_id': student_id,
+                                    'question_id': question_id,
+                                    'answer_id': correct_answer['answer_id'] if is_correct else random.choice([a['answer_id'] for a in session.run("MATCH (a:Answer) RETURN a.answerId as answer_id").data()]),
+                                    'attempt_time': attempt_time,
+                                    'score': 10 if is_correct else 0,
+                                    'feedback': "Làm đúng" if is_correct else "Cần cố gắng thêm"
+                                })
+
+                logging.info("Đã tạo xong dữ liệu học tập cho học sinh")
+        except Exception as e:
+            logging.error(f"Lỗi khi tạo dữ liệu học tập: {e}")
 
     def create_data(self, queries):
         if not self.driver:
@@ -147,10 +259,9 @@ class Neo4jDataCreator:
         try:
             with self.driver.session() as session:
                 for i, query_block in enumerate(queries):
-                    if query_block.strip() and not query_block.strip().startswith("//"): # Bỏ qua dòng trống hoặc chỉ có comment
+                    if query_block.strip() and not query_block.strip().startswith("//"):
                         logging.info(f"--- Bắt đầu thực thi khối {i+1} ---")
                         
-                        # Nếu khối truy vấn bắt đầu bằng RETURN, xử lý đặc biệt
                         if query_block.strip().startswith("RETURN"):
                             try:
                                 final_message = session.run(query_block).single()
@@ -159,11 +270,9 @@ class Neo4jDataCreator:
                             except Exception as e:
                                 logging.error(f"Lỗi khi thực thi câu lệnh RETURN: {e}")
                         else:
-                            # Tách các câu lệnh riêng biệt (chia theo dấu chấm phẩy)
                             individual_statements = [stmt.strip() for stmt in query_block.split(';') if stmt.strip()]
                             
                             for statement in individual_statements:
-                                # Thêm dấu chấm phẩy vào cuối nếu không phải là comment
                                 if not statement.strip().startswith("//"):
                                     statement = statement + ";"
                                     try:
@@ -174,12 +283,20 @@ class Neo4jDataCreator:
                                     except Exception as e:
                                         logging.error(f"Lỗi khi thực thi câu lệnh: {e}")
                                         logging.error(f"Câu lệnh gây lỗi: {statement}")
-                                        # Không dừng toàn bộ quá trình nếu một câu lệnh lỗi
                         
                         logging.info(f"--- Hoàn thành khối {i+1} ---")
+                
+                # Sau khi tạo dữ liệu cơ bản, tạo dữ liệu học tập cho học sinh
+                self.create_student_learning_data()
+                
                 logging.info("Tất cả các khối lệnh Cypher đã được thực thi.")
         except Exception as e:
             logging.error(f"Lỗi trong quá trình tạo dữ liệu: {e}")
+
+    def close(self):
+        if self.driver:
+            self.driver.close()
+            logging.info("Đã đóng kết nối Neo4j.")
 
     def clear_database(self):
         """Tùy chọn: Xóa tất cả dữ liệu trong database."""
