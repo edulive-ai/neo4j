@@ -322,10 +322,10 @@ if __name__ == "__main__":
 
     if creator.driver:
         # TÙY CHỌN: Xóa database trước nếu bạn muốn (bỏ comment dòng dưới)
-        # creator.clear_database()
+        creator.clear_database()
 
         # Tạo dữ liệu mẫu
-        creator.create_data(CYPHER_QUERIES)
+        # creator.create_data(CYPHER_QUERIES)
 
         # Đóng kết nối
         creator.close()
