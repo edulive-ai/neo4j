@@ -1,0 +1,440 @@
+{
+    "count": 43,
+    "filters": {
+        "grade": null,
+        "subject": null
+    },
+    "knowledge": [
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Trên - Dưới, Phải - Trái, Trước - Sau, Ở giữa",
+            "grade": "Lớp 1",
+            "id": "cdce70ce-f9fc-4d54-914c-5c4f405b22b7",
+            "name": "Trên - Dưới, Phải - Trái, Trước - Sau, Ở giữa",
+            "order": 1,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Hình vuông - Hình tròn - Hình tam giác - Hình chữ nhật",
+            "grade": "Lớp 1",
+            "id": "7114b4e2-d1c4-407c-9c69-aab10f7e8b66",
+            "name": "Hình vuông - Hình tròn - Hình tam giác - Hình chữ nhật",
+            "order": 2,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Các số 1, 2, 3",
+            "grade": "Lớp 1",
+            "id": "7eaebc7a-0d2c-450f-b22f-7546f7c70f20",
+            "name": "Các số 1, 2, 3",
+            "order": 3,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Các số 4, 5, 6",
+            "grade": "Lớp 1",
+            "id": "c5d96fa3-219c-48af-a5a7-860c2321077d",
+            "name": "Các số 4, 5, 6",
+            "order": 4,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Các số 7, 8, 9",
+            "grade": "Lớp 1",
+            "id": "08f4ceef-eeea-4235-b50f-1549888906a9",
+            "name": "Các số 7, 8, 9",
+            "order": 5,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Số 0",
+            "grade": "Lớp 1",
+            "id": "03e4e206-3918-4c53-849b-37222a9269fb",
+            "name": "Số 0",
+            "order": 6,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Số 10",
+            "grade": "Lớp 1",
+            "id": "71930c21-f219-482a-a4fc-7013421bc0f3",
+            "name": "Số 10",
+            "order": 7,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Nhiều hơn - Ít hơn - Bằng nhau",
+            "grade": "Lớp 1",
+            "id": "dae0f7f5-c41d-42e6-aedc-c0e217af69fc",
+            "name": "Nhiều hơn - Ít hơn - Bằng nhau",
+            "order": 8,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Lớn hơn, dấu >. Bé hơn, dấu <. Bằng nhau, dấu =",
+            "grade": "Lớp 1",
+            "id": "d35ab7dc-ab83-42d8-9510-54b3ccb5905f",
+            "name": "Lớn hơn, dấu >. Bé hơn, dấu <. Bằng nhau, dấu =",
+            "order": 9,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Em ôn lại những gì đã học",
+            "grade": "Lớp 1",
+            "id": "9dc25638-c00d-4f21-952e-edec0380bae3",
+            "name": "Em ôn lại những gì đã học",
+            "order": 10,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Làm quen với Phép cộng - Dấu cộng",
+            "grade": "Lớp 1",
+            "id": "442f6c01-2b6b-48cd-8cdd-8c6c7c2d138d",
+            "name": "Làm quen với Phép cộng - Dấu cộng",
+            "order": 11,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Làm quen với Phép cộng - Dấu cộng (tiếp theo)",
+            "grade": "Lớp 1",
+            "id": "47268fc2-7eef-40c4-bec7-8612d63624d0",
+            "name": "Làm quen với Phép cộng - Dấu cộng (tiếp theo)",
+            "order": 12,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Phép cộng trong phạm vi 6",
+            "grade": "Lớp 1",
+            "id": "ea8bdc1e-11d4-4551-906d-e65028531d6d",
+            "name": "Phép cộng trong phạm vi 6",
+            "order": 13,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Phép cộng trong phạm vi 6 (tiếp theo)",
+            "grade": "Lớp 1",
+            "id": "7cf2bc4e-758f-4ad5-8143-dfa68f15f33c",
+            "name": "Phép cộng trong phạm vi 6 (tiếp theo)",
+            "order": 14,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Phép cộng trong phạm vi 10",
+            "grade": "Lớp 1",
+            "id": "a1d496fd-6a8f-46c4-a01d-d093de5b6d8f",
+            "name": "Phép cộng trong phạm vi 10",
+            "order": 15,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Phép cộng trong phạm vi 10 (tiếp theo)",
+            "grade": "Lớp 1",
+            "id": "b1af79fa-b99c-4d88-ab1e-6c6bbc94c661",
+            "name": "Phép cộng trong phạm vi 10 (tiếp theo)",
+            "order": 16,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Khối hộp chữ nhật - Khối lập phương",
+            "grade": "Lớp 1",
+            "id": "44bb5263-771f-46d4-a844-b5e96d766a95",
+            "name": "Khối hộp chữ nhật - Khối lập phương",
+            "order": 17,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Làm quen với Phép trừ - Dấu trừ",
+            "grade": "Lớp 1",
+            "id": "002b1e3a-2b89-452c-8752-333e44345daf",
+            "name": "Làm quen với Phép trừ - Dấu trừ",
+            "order": 18,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Phép trừ trong phạm vi 6",
+            "grade": "Lớp 1",
+            "id": "544dc424-dcc3-4b62-838a-3f0d8b62dae1",
+            "name": "Phép trừ trong phạm vi 6",
+            "order": 19,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Phép trừ trong phạm vi 6 (tiếp theo)",
+            "grade": "Lớp 1",
+            "id": "a97d77ec-ff2b-46e9-b9db-02435528cf8b",
+            "name": "Phép trừ trong phạm vi 6 (tiếp theo)",
+            "order": 20,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Phép trừ trong phạm vi 10",
+            "grade": "Lớp 1",
+            "id": "1580bd7f-4408-4626-aa6e-0e843bd5c96c",
+            "name": "Phép trừ trong phạm vi 10",
+            "order": 21,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Phép trừ trong phạm vi 10 (tiếp theo)",
+            "grade": "Lớp 1",
+            "id": "eaff6020-857a-45bb-aada-8a73c6d554e4",
+            "name": "Phép trừ trong phạm vi 10 (tiếp theo)",
+            "order": 22,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Các số 11, 12, 13, 14, 15, 16",
+            "grade": "Lớp 1",
+            "id": "bcd8e4f1-80aa-4db2-ac5a-f1d6242f7827",
+            "name": "Các số 11, 12, 13, 14, 15, 16",
+            "order": 23,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Các số 17, 18, 19, 20",
+            "grade": "Lớp 1",
+            "id": "fd5a5bc4-9a4e-41c5-b4af-58c75d6b740f",
+            "name": "Các số 17, 18, 19, 20",
+            "order": 24,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Các số 10, 20, 30, 40, 50, 60, 70, 80, 90",
+            "grade": "Lớp 1",
+            "id": "7b836434-9960-4391-a4e0-ae91caa10e79",
+            "name": "Các số 10, 20, 30, 40, 50, 60, 70, 80, 90",
+            "order": 25,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Các số có hai chữ số (từ 21 đến 40)",
+            "grade": "Lớp 1",
+            "id": "fca93ec7-0885-4234-af11-a91bab8de922",
+            "name": "Các số có hai chữ số (từ 21 đến 40)",
+            "order": 26,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Các số có hai chữ số (từ 41 đến 70)",
+            "grade": "Lớp 1",
+            "id": "2daaaf5b-37bc-4817-9ee8-295142ed9817",
+            "name": "Các số có hai chữ số (từ 41 đến 70)",
+            "order": 27,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Các số có hai chữ số (từ 71 đến 99)",
+            "grade": "Lớp 1",
+            "id": "d2479142-8a1b-4693-b0fe-6977f2d95b0d",
+            "name": "Các số có hai chữ số (từ 71 đến 99)",
+            "order": 28,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Các số đến 100",
+            "grade": "Lớp 1",
+            "id": "1b86a834-85a8-4dc3-87db-74522415e854",
+            "name": "Các số đến 100",
+            "order": 29,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Chục và đơn vị",
+            "grade": "Lớp 1",
+            "id": "75eeff86-7532-46d0-a815-02b5caeae7a2",
+            "name": "Chục và đơn vị",
+            "order": 30,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: So sánh các số trong phạm vi 100",
+            "grade": "Lớp 1",
+            "id": "0c7ffe5e-5149-4e4d-a4c6-13fda9256eab",
+            "name": "So sánh các số trong phạm vi 100",
+            "order": 31,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Dài hơn - Ngắn hơn",
+            "grade": "Lớp 1",
+            "id": "dfb46029-cf3f-4c2c-85ad-e39dbfe239d5",
+            "name": "Dài hơn - Ngắn hơn",
+            "order": 32,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Đo độ dài",
+            "grade": "Lớp 1",
+            "id": "13b52abf-cb7d-4fc8-a7ea-27e2c732cfd8",
+            "name": "Đo độ dài",
+            "order": 33,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Xăng-ti-mét",
+            "grade": "Lớp 1",
+            "id": "9f57db7a-85f3-4bde-95c0-e9277b4f8482",
+            "name": "Xăng-ti-mét",
+            "order": 34,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Phép cộng dạng 14 + 3",
+            "grade": "Lớp 1",
+            "id": "1fb69360-a44d-40c4-86ea-e0a029ea0fcf",
+            "name": "Phép cộng dạng 14 + 3",
+            "order": 35,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Phép trừ dạng 17 - 2",
+            "grade": "Lớp 1",
+            "id": "7433ef8a-b1bc-48f8-9cda-5b9a105c3329",
+            "name": "Phép trừ dạng 17 - 2",
+            "order": 36,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Cộng, trừ các số tròn chục",
+            "grade": "Lớp 1",
+            "id": "0e27fa45-30d9-42f6-95cb-0cd6ce0e87c8",
+            "name": "Cộng, trừ các số tròn chục",
+            "order": 37,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Phép cộng dạng 25 + 14",
+            "grade": "Lớp 1",
+            "id": "508aa7d0-31b2-4b02-af81-331f2cc29f38",
+            "name": "Phép cộng dạng 25 + 14",
+            "order": 38,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Phép cộng dạng 25 + 4, 25 + 40",
+            "grade": "Lớp 1",
+            "id": "7a912922-eb15-419e-95b3-ab8e0c9e1025",
+            "name": "Phép cộng dạng 25 + 4, 25 + 40",
+            "order": 39,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Phép trừ dạng 39 – 15",
+            "grade": "Lớp 1",
+            "id": "edda7bf7-0a54-4414-bfdf-fff469fc242f",
+            "name": "Phép trừ dạng 39 – 15",
+            "order": 40,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Phép trừ dạng 27 – 4, 63 – 40",
+            "grade": "Lớp 1",
+            "id": "154725be-a753-4be0-b88c-2da936921450",
+            "name": "Phép trừ dạng 27 – 4, 63 – 40",
+            "order": 41,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Các ngày trong tuần lễ",
+            "grade": "Lớp 1",
+            "id": "beeb9425-9072-4aa6-8139-3d72e2410724",
+            "name": "Các ngày trong tuần lễ",
+            "order": 42,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        },
+        {
+            "createdAt": "2025-05-27T14:07:50.037031",
+            "description": "Kiến thức về: Đồng hồ - thời gian",
+            "grade": "Lớp 1",
+            "id": "01681991-5db6-4162-82c2-8c3408a86307",
+            "name": "Đồng hồ - thời gian",
+            "order": 43,
+            "subject": "Toán",
+            "updatedAt": "2025-05-27T14:07:50.037031"
+        }
+    ],
+    "success": true
+}

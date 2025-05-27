@@ -1,0 +1,339 @@
+{
+    "count": 42,
+    "success": true,
+    "users": [
+        {
+            "age": 6,
+            "createdAt": "2025-04-24T19:08:16.309222",
+            "email": "lan.bui@student.com",
+            "id": "1076a36c-4256-4ff4-baca-bcdbc308fba5",
+            "name": "Bùi Thị Lan",
+            "updatedAt": "2025-05-23T19:08:16.309228"
+        },
+        {
+            "age": 7,
+            "createdAt": "2025-04-24T19:08:16.309188",
+            "email": "em.hoang@student.com",
+            "id": "06f42565-55b4-4560-bd5c-5d30086ca070",
+            "name": "Hoàng Văn Em",
+            "updatedAt": "2025-05-23T19:08:16.309194"
+        },
+        {
+            "age": 7,
+            "createdAt": "2025-04-24T19:08:16.309166",
+            "email": "cuong.le@student.com",
+            "id": "2069f9f4-efd2-4c39-9c9b-18f45a7d4ff2",
+            "name": "Lê Văn Cường",
+            "updatedAt": "2025-05-23T19:08:16.309171"
+        },
+        {
+            "age": 7,
+            "createdAt": "2025-05-26T10:12:22.085070",
+            "email": "an@student.com",
+            "id": "user1",
+            "name": "Nguyễn Bá Tiến",
+            "updatedAt": "2025-05-26T10:12:22.085070"
+        },
+        {
+            "age": 7,
+            "createdAt": "2025-04-24T19:08:16.309107",
+            "email": "an.nguyen@student.com",
+            "id": "3aa1b583-b233-4178-b67e-6221789ea1ad",
+            "name": "Nguyễn Văn An",
+            "updatedAt": "2025-05-23T19:08:16.309147"
+        },
+        {
+            "age": 21,
+            "createdAt": "2025-05-27T10:10:47.014694",
+            "email": "user1@example.com",
+            "id": "43ce56c7-82b0-4353-ae26-3ea946c26787",
+            "name": "Người dùng 1",
+            "updatedAt": "2025-05-27T10:10:47.014702"
+        },
+        {
+            "age": 30,
+            "createdAt": "2025-05-27T10:10:47.014756",
+            "email": "user10@example.com",
+            "id": "a046cc9f-9ff3-42f1-8741-6ecccf77dedc",
+            "name": "Người dùng 10",
+            "updatedAt": "2025-05-27T10:10:47.014756"
+        },
+        {
+            "age": 31,
+            "createdAt": "2025-05-27T10:10:47.014761",
+            "email": "user11@example.com",
+            "id": "e3a8e9f4-e96b-4461-a03a-16d4d7a46bc8",
+            "name": "Người dùng 11",
+            "updatedAt": "2025-05-27T10:10:47.014762"
+        },
+        {
+            "age": 32,
+            "createdAt": "2025-05-27T10:10:47.014766",
+            "email": "user12@example.com",
+            "id": "a4f1d404-e0d6-4ac1-9147-726253f6dcea",
+            "name": "Người dùng 12",
+            "updatedAt": "2025-05-27T10:10:47.014767"
+        },
+        {
+            "age": 33,
+            "createdAt": "2025-05-27T10:10:47.014771",
+            "email": "user13@example.com",
+            "id": "a95bce09-8147-4a55-8c47-c8428710dad6",
+            "name": "Người dùng 13",
+            "updatedAt": "2025-05-27T10:10:47.014772"
+        },
+        {
+            "age": 34,
+            "createdAt": "2025-05-27T10:10:47.014779",
+            "email": "user14@example.com",
+            "id": "73e47971-59bf-4638-b6f2-88bece06039d",
+            "name": "Người dùng 14",
+            "updatedAt": "2025-05-27T10:10:47.014780"
+        },
+        {
+            "age": 35,
+            "createdAt": "2025-05-27T10:10:47.014785",
+            "email": "user15@example.com",
+            "id": "0c90dc7d-ff83-482a-93d1-ac9f38b07396",
+            "name": "Người dùng 15",
+            "updatedAt": "2025-05-27T10:10:47.014786"
+        },
+        {
+            "age": 36,
+            "createdAt": "2025-05-27T10:10:47.014790",
+            "email": "user16@example.com",
+            "id": "9c331e55-e349-4c48-ab03-1780b4e69ede",
+            "name": "Người dùng 16",
+            "updatedAt": "2025-05-27T10:10:47.014791"
+        },
+        {
+            "age": 37,
+            "createdAt": "2025-05-27T10:10:47.014796",
+            "email": "user17@example.com",
+            "id": "1613b043-0374-4e7e-86b1-b161cbb07072",
+            "name": "Người dùng 17",
+            "updatedAt": "2025-05-27T10:10:47.014797"
+        },
+        {
+            "age": 38,
+            "createdAt": "2025-05-27T10:10:47.014804",
+            "email": "user18@example.com",
+            "id": "b2e4fc7c-735a-4ccc-9116-bc1a30496d51",
+            "name": "Người dùng 18",
+            "updatedAt": "2025-05-27T10:10:47.014805"
+        },
+        {
+            "age": 39,
+            "createdAt": "2025-05-27T10:10:47.014811",
+            "email": "user19@example.com",
+            "id": "9ef6b61c-6d71-4ce8-bdf6-954384d72aee",
+            "name": "Người dùng 19",
+            "updatedAt": "2025-05-27T10:10:47.014813"
+        },
+        {
+            "age": 22,
+            "createdAt": "2025-05-27T10:10:47.014711",
+            "email": "user2@example.com",
+            "id": "77faf9db-9c3c-4886-8216-ba9e46183c24",
+            "name": "Người dùng 2",
+            "updatedAt": "2025-05-27T10:10:47.014714"
+        },
+        {
+            "age": 40,
+            "createdAt": "2025-05-27T10:10:47.014818",
+            "email": "user20@example.com",
+            "id": "a46f9361-cafa-4a1b-9402-7d9e65ef97a3",
+            "name": "Người dùng 20",
+            "updatedAt": "2025-05-27T10:10:47.014819"
+        },
+        {
+            "age": 41,
+            "createdAt": "2025-05-27T10:10:47.014823",
+            "email": "user21@example.com",
+            "id": "f947aab4-2e3a-4b45-8275-5aa13d0dca02",
+            "name": "Người dùng 21",
+            "updatedAt": "2025-05-27T10:10:47.014824"
+        },
+        {
+            "age": 42,
+            "createdAt": "2025-05-27T10:10:47.014827",
+            "email": "user22@example.com",
+            "id": "cd290ae6-13ae-44e3-a25e-aa698e7487c3",
+            "name": "Người dùng 22",
+            "updatedAt": "2025-05-27T10:10:47.014828"
+        },
+        {
+            "age": 43,
+            "createdAt": "2025-05-27T10:10:47.014832",
+            "email": "user23@example.com",
+            "id": "72b865b0-4127-4692-9e8a-4c4be48e09d0",
+            "name": "Người dùng 23",
+            "updatedAt": "2025-05-27T10:10:47.014833"
+        },
+        {
+            "age": 44,
+            "createdAt": "2025-05-27T10:10:47.014837",
+            "email": "user24@example.com",
+            "id": "d0f5605a-a70f-4fe9-ade0-8269005e15db",
+            "name": "Người dùng 24",
+            "updatedAt": "2025-05-27T10:10:47.014838"
+        },
+        {
+            "age": 45,
+            "createdAt": "2025-05-27T10:10:47.014842",
+            "email": "user25@example.com",
+            "id": "e418f031-bd47-4515-8a6b-d6a0dc25baa4",
+            "name": "Người dùng 25",
+            "updatedAt": "2025-05-27T10:10:47.014843"
+        },
+        {
+            "age": 46,
+            "createdAt": "2025-05-27T10:10:47.014847",
+            "email": "user26@example.com",
+            "id": "f1eee11c-5b64-4d37-a533-900dafc50248",
+            "name": "Người dùng 26",
+            "updatedAt": "2025-05-27T10:10:47.014848"
+        },
+        {
+            "age": 47,
+            "createdAt": "2025-05-27T10:10:47.014853",
+            "email": "user27@example.com",
+            "id": "6c1ec3a0-3304-4fc4-a4eb-d3c2fe64230c",
+            "name": "Người dùng 27",
+            "updatedAt": "2025-05-27T10:10:47.014854"
+        },
+        {
+            "age": 48,
+            "createdAt": "2025-05-27T10:10:47.014858",
+            "email": "user28@example.com",
+            "id": "78449fc2-1776-454d-901e-e6ab78a23a5d",
+            "name": "Người dùng 28",
+            "updatedAt": "2025-05-27T10:10:47.014859"
+        },
+        {
+            "age": 49,
+            "createdAt": "2025-05-27T10:10:47.014862",
+            "email": "user29@example.com",
+            "id": "b6563c57-8010-499d-ba50-0f2cd53182f0",
+            "name": "Người dùng 29",
+            "updatedAt": "2025-05-27T10:10:47.014863"
+        },
+        {
+            "age": 23,
+            "createdAt": "2025-05-27T10:10:47.014719",
+            "email": "user3@example.com",
+            "id": "c7ce925e-72a8-4318-8c5a-46b5cddccf0b",
+            "name": "Người dùng 3",
+            "updatedAt": "2025-05-27T10:10:47.014720"
+        },
+        {
+            "age": 50,
+            "createdAt": "2025-05-27T10:10:47.014867",
+            "email": "user30@example.com",
+            "id": "0687318a-f08c-4618-a208-2b5cd51d2877",
+            "name": "Người dùng 30",
+            "updatedAt": "2025-05-27T10:10:47.014868"
+        },
+        {
+            "age": 24,
+            "createdAt": "2025-05-27T10:10:47.014725",
+            "email": "user4@example.com",
+            "id": "6b59b9a7-75be-4314-961a-7ecaf53c1099",
+            "name": "Người dùng 4",
+            "updatedAt": "2025-05-27T10:10:47.014726"
+        },
+        {
+            "age": 25,
+            "createdAt": "2025-05-27T10:10:47.014730",
+            "email": "user5@example.com",
+            "id": "eefc005a-eb5e-4727-ba35-48348116b746",
+            "name": "Người dùng 5",
+            "updatedAt": "2025-05-27T10:10:47.014731"
+        },
+        {
+            "age": 26,
+            "createdAt": "2025-05-27T10:10:47.014735",
+            "email": "user6@example.com",
+            "id": "9066c37d-1315-4c09-b87e-94528ae4d628",
+            "name": "Người dùng 6",
+            "updatedAt": "2025-05-27T10:10:47.014736"
+        },
+        {
+            "age": 27,
+            "createdAt": "2025-05-27T10:10:47.014740",
+            "email": "user7@example.com",
+            "id": "57213c37-092c-4b42-9eb9-fe385a60e26c",
+            "name": "Người dùng 7",
+            "updatedAt": "2025-05-27T10:10:47.014741"
+        },
+        {
+            "age": 28,
+            "createdAt": "2025-05-27T10:10:47.014745",
+            "email": "user8@example.com",
+            "id": "571a447b-3b71-4c61-9e2d-e66e612a4b53",
+            "name": "Người dùng 8",
+            "updatedAt": "2025-05-27T10:10:47.014746"
+        },
+        {
+            "age": 29,
+            "createdAt": "2025-05-27T10:10:47.014750",
+            "email": "user9@example.com",
+            "id": "e6e886e6-7cc4-4ee7-9eea-0ef22f1186d1",
+            "name": "Người dùng 9",
+            "updatedAt": "2025-05-27T10:10:47.014751"
+        },
+        {
+            "age": 6,
+            "createdAt": "2025-04-24T19:08:16.309177",
+            "email": "dung.pham@student.com",
+            "id": "c84d0fca-3c26-434c-9eb4-7c62cc3e8261",
+            "name": "Phạm Thị Dung",
+            "updatedAt": "2025-05-23T19:08:16.309183"
+        },
+        {
+            "age": 6,
+            "createdAt": "2025-04-24T19:08:16.309154",
+            "email": "binh.tran@student.com",
+            "id": "5836083b-63e1-4f40-9069-702bc6590f94",
+            "name": "Trần Thị Bình",
+            "updatedAt": "2025-05-23T19:08:16.309160"
+        },
+        {
+            "age": 7,
+            "createdAt": "2025-05-26T13:53:02.201974",
+            "email": "user1@test.com",
+            "id": "e5057807-2f60-427e-8a21-11cc13d6c16a",
+            "name": "User 1"
+        },
+        {
+            "age": 8,
+            "createdAt": "2025-05-26T13:53:02.515816",
+            "email": "user2@test.com",
+            "id": "5077a8cd-9b1a-49a8-aa92-75d5a208e04c",
+            "name": "User 2"
+        },
+        {
+            "age": 6,
+            "createdAt": "2025-04-24T19:08:16.309200",
+            "email": "hoa.vu@student.com",
+            "id": "6699d8fb-9d80-4e65-96fa-b834ec1ca9a3",
+            "name": "Vũ Thị Hoa",
+            "updatedAt": "2025-05-23T19:08:16.309206"
+        },
+        {
+            "age": 7,
+            "createdAt": "2025-05-26T13:50:20.379320",
+            "email": "batien@student.com",
+            "id": "2b081059-2744-46f5-a92a-3d6d6f9cc2ff",
+            "name": "nguyen ba tien"
+        },
+        {
+            "age": 7,
+            "createdAt": "2025-04-24T19:08:16.309211",
+            "email": "khoa.dang@student.com",
+            "id": "8382fbf0-0b84-4db7-9de0-4fa656e135e8",
+            "name": "Đặng Văn Khoa",
+            "updatedAt": "2025-05-23T19:08:16.309217"
+        }
+    ]
+}
