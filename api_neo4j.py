@@ -13,6 +13,9 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from neo4j import GraphDatabase
 import logging
+from dotenv import load_dotenv
+
+load_dotenv()
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

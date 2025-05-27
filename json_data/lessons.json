@@ -3,642 +3,642 @@
     "lessons": [
         {
             "chapter_name": "Chương 1: Các số đến 10",
-            "createdAt": "2025-04-19T19:08:16.903600",
+            "createdAt": "2025-04-22T07:52:07.577554",
             "description": "Bài học: Bài 1: Trên - Dưới, Phải - Trái, Trước - Sau, Ở giữa",
-            "id": "22c1f329-6708-463e-982c-46f19453f149",
+            "id": "c2337786-ee2e-4575-bb4e-328ebe2c69a8",
             "name": "Bài 1: Trên - Dưới, Phải - Trái, Trước - Sau, Ở giữa",
             "order": 1,
-            "updatedAt": "2025-05-23T19:08:16.903602"
+            "updatedAt": "2025-05-26T07:52:07.577557"
         },
         {
             "chapter_name": "Chương 1: Các số đến 10",
-            "createdAt": "2025-04-19T19:08:16.903611",
+            "createdAt": "2025-04-22T07:52:07.577572",
             "description": "Bài học: Bài 2: Hình vuông - Hình tròn - Hình tam giác - Hình chữ nhật",
-            "id": "0748431c-7ed9-43a4-a9df-35d4a6680d7f",
+            "id": "22669242-6a27-417c-af34-0a3670439662",
             "name": "Bài 2: Hình vuông - Hình tròn - Hình tam giác - Hình chữ nhật",
             "order": 2,
-            "updatedAt": "2025-05-23T19:08:16.903613"
+            "updatedAt": "2025-05-26T07:52:07.577574"
         },
         {
             "chapter_name": "Chương 1: Các số đến 10",
-            "createdAt": "2025-04-19T19:08:16.903628",
+            "createdAt": "2025-04-22T07:52:07.577588",
             "description": "Bài học: Bài 3: Các số 1, 2, 3",
-            "id": "1f28339e-9e86-4989-b5ee-56f30bcb4569",
+            "id": "c001d25b-f7ce-4ec8-a618-6df656eb5ae0",
             "name": "Bài 3: Các số 1, 2, 3",
             "order": 3,
-            "updatedAt": "2025-05-23T19:08:16.903629"
+            "updatedAt": "2025-05-26T07:52:07.577590"
         },
         {
             "chapter_name": "Chương 1: Các số đến 10",
-            "createdAt": "2025-04-19T19:08:16.903636",
+            "createdAt": "2025-04-22T07:52:07.577600",
             "description": "Bài học: Bài 4: Các số 4, 5, 6",
-            "id": "8aa3c6d7-bb0f-4f38-a239-e8b62fca74c7",
+            "id": "f1ec4ea8-adb7-4381-9c21-83979ba98e3f",
             "name": "Bài 4: Các số 4, 5, 6",
             "order": 4,
-            "updatedAt": "2025-05-23T19:08:16.903638"
+            "updatedAt": "2025-05-26T07:52:07.577603"
         },
         {
             "chapter_name": "Chương 1: Các số đến 10",
-            "createdAt": "2025-04-19T19:08:16.903644",
+            "createdAt": "2025-04-22T07:52:07.577613",
             "description": "Bài học: Bài 5: Các số 7, 8, 9",
-            "id": "c7a85f81-31ef-4572-9b41-a9b2597c0557",
+            "id": "e98f2840-b3a8-4feb-b8d2-1d9f5cff9531",
             "name": "Bài 5: Các số 7, 8, 9",
             "order": 5,
-            "updatedAt": "2025-05-23T19:08:16.903646"
+            "updatedAt": "2025-05-26T07:52:07.577615"
         },
         {
             "chapter_name": "Chương 1: Các số đến 10",
-            "createdAt": "2025-04-19T19:08:16.903652",
+            "createdAt": "2025-04-22T07:52:07.577626",
             "description": "Bài học: Bài 6: Số 0",
-            "id": "1f4b1226-0fc7-4d04-a1d3-08f3be2917b5",
+            "id": "f22fcfc0-7ad2-4cbf-a9c9-c3e670a4b7fa",
             "name": "Bài 6: Số 0",
             "order": 6,
-            "updatedAt": "2025-05-23T19:08:16.903655"
+            "updatedAt": "2025-05-26T07:52:07.577628"
         },
         {
             "chapter_name": "Chương 1: Các số đến 10",
-            "createdAt": "2025-04-19T19:08:16.903666",
+            "createdAt": "2025-04-22T07:52:07.577639",
             "description": "Bài học: Bài 7: Số 10",
-            "id": "9b1aafe1-7788-4c6f-adf8-2e179d9f307a",
+            "id": "dbd16d40-4b1a-4c3a-8ca7-c1fce25beaee",
             "name": "Bài 7: Số 10",
             "order": 7,
-            "updatedAt": "2025-05-23T19:08:16.903669"
+            "updatedAt": "2025-05-26T07:52:07.577641"
         },
         {
             "chapter_name": "Chương 1: Các số đến 10",
-            "createdAt": "2025-04-19T19:08:16.903679",
+            "createdAt": "2025-04-22T07:52:07.577651",
             "description": "Bài học: Bài 8: Luyện tập",
-            "id": "c6bcbf1c-1f18-4536-89f3-52dc83facd68",
+            "id": "58064f53-d462-4039-81a4-7d63f80c0503",
             "name": "Bài 8: Luyện tập",
             "order": 8,
-            "updatedAt": "2025-05-23T19:08:16.903682"
+            "updatedAt": "2025-05-26T07:52:07.577653"
         },
         {
             "chapter_name": "Chương 1: Các số đến 10",
-            "createdAt": "2025-04-19T19:08:16.903691",
+            "createdAt": "2025-04-22T07:52:07.577669",
             "description": "Bài học: Bài 9: Nhiều hơn - Ít hơn - Bằng nhau",
-            "id": "eb6db837-8c5f-4c9d-baa0-6207df3b5afa",
+            "id": "66e395f8-e548-4324-bc40-e5c6d8ae79e9",
             "name": "Bài 9: Nhiều hơn - Ít hơn - Bằng nhau",
             "order": 9,
-            "updatedAt": "2025-05-23T19:08:16.903694"
+            "updatedAt": "2025-05-26T07:52:07.577671"
         },
         {
             "chapter_name": "Chương 1: Các số đến 10",
-            "createdAt": "2025-04-19T19:08:16.903701",
+            "createdAt": "2025-04-22T07:52:07.577681",
             "description": "Bài học: Bài 10: Lớn hơn, dấu >. Bé hơn, dấu <. Bằng nhau, dấu =",
-            "id": "2cd2a23d-c3a9-4302-b7aa-c04138cc1683",
+            "id": "ae6eaf6d-767c-4c8e-a714-cc2e373ad14b",
             "name": "Bài 10: Lớn hơn, dấu >. Bé hơn, dấu <. Bằng nhau, dấu =",
             "order": 10,
-            "updatedAt": "2025-05-23T19:08:16.903702"
+            "updatedAt": "2025-05-26T07:52:07.577683"
         },
         {
             "chapter_name": "Chương 1: Các số đến 10",
-            "createdAt": "2025-04-19T19:08:16.903710",
+            "createdAt": "2025-04-22T07:52:07.577693",
             "description": "Bài học: Bài 11: Luyện tập",
-            "id": "40ca1b2d-e634-413b-9b83-90a21edc4cae",
+            "id": "adc34422-23d8-4198-8089-8a7954cf7467",
             "name": "Bài 11: Luyện tập",
             "order": 11,
-            "updatedAt": "2025-05-23T19:08:16.903712"
+            "updatedAt": "2025-05-26T07:52:07.577695"
         },
         {
             "chapter_name": "Chương 1: Các số đến 10",
-            "createdAt": "2025-04-19T19:08:16.903720",
+            "createdAt": "2025-04-22T07:52:07.577705",
             "description": "Bài học: Bài 12: Em ôn lại những gì đã học",
-            "id": "2e0d8eef-2c2d-43ce-bf89-4b74ed99551d",
+            "id": "c0be3653-dc92-4ede-a25c-ad057bf738ec",
             "name": "Bài 12: Em ôn lại những gì đã học",
             "order": 12,
-            "updatedAt": "2025-05-23T19:08:16.903722"
+            "updatedAt": "2025-05-26T07:52:07.577707"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903736",
+            "createdAt": "2025-04-22T07:52:07.577727",
             "description": "Bài học: Bài 14: Làm quen với Phép cộng - Dấu cộng",
-            "id": "a2e2deb1-535e-44df-a988-b3fdeb290c0a",
+            "id": "d998bb3b-c923-4555-aeb6-0f39a6d33192",
             "name": "Bài 14: Làm quen với Phép cộng - Dấu cộng",
             "order": 1,
-            "updatedAt": "2025-05-23T19:08:16.903738"
+            "updatedAt": "2025-05-26T07:52:07.577729"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903746",
+            "createdAt": "2025-04-22T07:52:07.577739",
             "description": "Bài học: Bài 15: Làm quen với Phép cộng - Dấu cộng (tiếp theo)",
-            "id": "81119ff0-dec8-486a-b740-14340fe2fbbd",
+            "id": "d1d14640-7d1b-4e70-b114-2255877fc004",
             "name": "Bài 15: Làm quen với Phép cộng - Dấu cộng (tiếp theo)",
             "order": 2,
-            "updatedAt": "2025-05-23T19:08:16.903748"
+            "updatedAt": "2025-05-26T07:52:07.577741"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903755",
+            "createdAt": "2025-04-22T07:52:07.577750",
             "description": "Bài học: Bài 16: Phép cộng trong phạm vi 6",
-            "id": "47d8fe5f-f685-4b91-9a80-1d2b0c79d40d",
+            "id": "f285b66d-83ba-41f0-8cdc-05c994a0f731",
             "name": "Bài 16: Phép cộng trong phạm vi 6",
             "order": 3,
-            "updatedAt": "2025-05-23T19:08:16.903757"
+            "updatedAt": "2025-05-26T07:52:07.577752"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903764",
+            "createdAt": "2025-04-22T07:52:07.577762",
             "description": "Bài học: Bài 17: Phép cộng trong phạm vi 6 (tiếp theo)",
-            "id": "efbc3c22-8e05-4f9d-869e-acc52b377e1c",
+            "id": "7dabc8a5-09c8-4d6e-8199-dbff8a578cdf",
             "name": "Bài 17: Phép cộng trong phạm vi 6 (tiếp theo)",
             "order": 4,
-            "updatedAt": "2025-05-23T19:08:16.903766"
+            "updatedAt": "2025-05-26T07:52:07.577764"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903774",
+            "createdAt": "2025-04-22T07:52:07.577773",
             "description": "Bài học: Bài 18: Luyện tập",
-            "id": "a252596e-b509-40c1-997a-6123dd0b65ee",
+            "id": "29a85c1d-7f33-45ac-9593-b44d56ee2481",
             "name": "Bài 18: Luyện tập",
             "order": 5,
-            "updatedAt": "2025-05-23T19:08:16.903776"
+            "updatedAt": "2025-05-26T07:52:07.577775"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903783",
+            "createdAt": "2025-04-22T07:52:07.577797",
             "description": "Bài học: Bài 19: Phép cộng trong phạm vi 10",
-            "id": "acf6faef-9d86-401e-8dc6-51a762d49d25",
+            "id": "6cbe67c7-4564-4472-84de-80d8b4c397dd",
             "name": "Bài 19: Phép cộng trong phạm vi 10",
             "order": 6,
-            "updatedAt": "2025-05-23T19:08:16.903785"
+            "updatedAt": "2025-05-26T07:52:07.577799"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903795",
+            "createdAt": "2025-04-22T07:52:07.577809",
             "description": "Bài học: Bài 20: Luyện tập",
-            "id": "9d047a50-80bb-4e8c-b299-ae5917fecb1b",
+            "id": "190e63a8-709c-4aa4-be1f-ccdb104171a1",
             "name": "Bài 20: Luyện tập",
             "order": 7,
-            "updatedAt": "2025-05-23T19:08:16.903796"
+            "updatedAt": "2025-05-26T07:52:07.577811"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903810",
+            "createdAt": "2025-04-22T07:52:07.577822",
             "description": "Bài học: Bài 21: Phép cộng trong phạm vi 10 (tiếp theo)",
-            "id": "af75fe72-1f40-424e-a761-86a79f94cbeb",
+            "id": "d1ea9796-bcab-418c-a765-d0cdaa9b82e1",
             "name": "Bài 21: Phép cộng trong phạm vi 10 (tiếp theo)",
             "order": 8,
-            "updatedAt": "2025-05-23T19:08:16.903813"
+            "updatedAt": "2025-05-26T07:52:07.577824"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903824",
+            "createdAt": "2025-04-22T07:52:07.577835",
             "description": "Bài học: Bài 22: Luyện tập",
-            "id": "acab123b-3cd7-4d59-b1c7-20ad00cad89e",
+            "id": "b2d3627e-1683-43a3-b349-893666176227",
             "name": "Bài 22: Luyện tập",
             "order": 9,
-            "updatedAt": "2025-05-23T19:08:16.903827"
+            "updatedAt": "2025-05-26T07:52:07.577837"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903835",
+            "createdAt": "2025-04-22T07:52:07.577848",
             "description": "Bài học: Bài 23: Khối hộp chữ nhật - Khối lập phương",
-            "id": "d74d71ca-2614-44c0-89fa-f285ddca7500",
+            "id": "eb866799-12a3-4d6e-a7bf-7df313cb360d",
             "name": "Bài 23: Khối hộp chữ nhật - Khối lập phương",
             "order": 10,
-            "updatedAt": "2025-05-23T19:08:16.903837"
+            "updatedAt": "2025-05-26T07:52:07.577851"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903845",
+            "createdAt": "2025-04-22T07:52:07.577866",
             "description": "Bài học: Bài 24: Làm quen với Phép trừ - Dấu trừ",
-            "id": "7fefadef-d0cc-4862-b28e-c1a75eb9bb84",
+            "id": "008acad9-934b-4cc4-b38d-54df15ab6bae",
             "name": "Bài 24: Làm quen với Phép trừ - Dấu trừ",
             "order": 11,
-            "updatedAt": "2025-05-23T19:08:16.903846"
+            "updatedAt": "2025-05-26T07:52:07.577869"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903854",
+            "createdAt": "2025-04-22T07:52:07.577880",
             "description": "Bài học: Bài 25: Phép trừ trong phạm vi 6",
-            "id": "901ebcd6-e35b-46b6-b657-d2d087accfee",
+            "id": "10166307-a3d4-44e1-abfc-07952057949c",
             "name": "Bài 25: Phép trừ trong phạm vi 6",
             "order": 12,
-            "updatedAt": "2025-05-23T19:08:16.903856"
+            "updatedAt": "2025-05-26T07:52:07.577882"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903863",
+            "createdAt": "2025-04-22T07:52:07.577895",
             "description": "Bài học: Bài 26: Luyện tập",
-            "id": "1acde634-dfd9-449a-8056-b042659ea94d",
+            "id": "9dfdde0d-04c2-4c28-99ae-16344432ba9e",
             "name": "Bài 26: Luyện tập",
             "order": 13,
-            "updatedAt": "2025-05-23T19:08:16.903865"
+            "updatedAt": "2025-05-26T07:52:07.577897"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903873",
+            "createdAt": "2025-04-22T07:52:07.577908",
             "description": "Bài học: Bài 27: Phép trừ trong phạm vi 6 (tiếp theo)",
-            "id": "66bfe1dc-d1d4-4bf8-b041-7dcd5546ad93",
+            "id": "dbda22a2-3613-4513-9065-d3d183080731",
             "name": "Bài 27: Phép trừ trong phạm vi 6 (tiếp theo)",
             "order": 14,
-            "updatedAt": "2025-05-23T19:08:16.903875"
+            "updatedAt": "2025-05-26T07:52:07.577910"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903883",
+            "createdAt": "2025-04-22T07:52:07.577923",
             "description": "Bài học: Bài 28: Luyện tập",
-            "id": "0b1fab44-78b4-4912-ad1a-f98df699586f",
+            "id": "3e297201-6a2f-4457-9dcd-fc8569d587c7",
             "name": "Bài 28: Luyện tập",
             "order": 15,
-            "updatedAt": "2025-05-23T19:08:16.903885"
+            "updatedAt": "2025-05-26T07:52:07.577925"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903893",
+            "createdAt": "2025-04-22T07:52:07.577939",
             "description": "Bài học: Bài 29: Phép trừ trong phạm vi 10",
-            "id": "2e0207b8-d172-4500-a543-64f9dd212397",
+            "id": "9a30eb0c-33ac-4edd-a7cd-e8498af163aa",
             "name": "Bài 29: Phép trừ trong phạm vi 10",
             "order": 16,
-            "updatedAt": "2025-05-23T19:08:16.903898"
+            "updatedAt": "2025-05-26T07:52:07.577941"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903905",
+            "createdAt": "2025-04-22T07:52:07.577951",
             "description": "Bài học: Bài 30: Luyện tập",
-            "id": "3dc81f39-90a6-4572-9e21-7b41e6f3ee92",
+            "id": "e6ae0165-accc-4646-821c-0a5ceabf2980",
             "name": "Bài 30: Luyện tập",
             "order": 17,
-            "updatedAt": "2025-05-23T19:08:16.903907"
+            "updatedAt": "2025-05-26T07:52:07.577954"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903917",
+            "createdAt": "2025-04-22T07:52:07.577966",
             "description": "Bài học: Bài 31: Phép trừ trong phạm vi 10 (tiếp theo)",
-            "id": "ab2cdbfe-1014-4b98-8612-79651ded04cb",
+            "id": "4b37363a-4e5e-4b99-9037-fc74ec9fe7d7",
             "name": "Bài 31: Phép trừ trong phạm vi 10 (tiếp theo)",
             "order": 18,
-            "updatedAt": "2025-05-23T19:08:16.903919"
+            "updatedAt": "2025-05-26T07:52:07.577969"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903927",
+            "createdAt": "2025-04-22T07:52:07.577981",
             "description": "Bài học: Bài 32: Luyện tập",
-            "id": "830d0c3c-c986-4875-b1cf-4c4f9a45233c",
+            "id": "177d8d7a-2a0e-4c89-b1cc-c567bae08706",
             "name": "Bài 32: Luyện tập",
             "order": 19,
-            "updatedAt": "2025-05-23T19:08:16.903929"
+            "updatedAt": "2025-05-26T07:52:07.577984"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903938",
+            "createdAt": "2025-04-22T07:52:07.577995",
             "description": "Bài học: Bài 33: Luyện tập",
-            "id": "c17598ae-2415-48b5-b4c4-eb1af99ba1b4",
+            "id": "93c5a61c-96fa-4b23-9d49-41ccbf851351",
             "name": "Bài 33: Luyện tập",
             "order": 20,
-            "updatedAt": "2025-05-23T19:08:16.903940"
+            "updatedAt": "2025-05-26T07:52:07.577997"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903949",
+            "createdAt": "2025-04-22T07:52:07.578013",
             "description": "Bài học: Bài 34: Luyện tập",
-            "id": "d35b30ad-11fb-4598-9090-39ba3697c27a",
+            "id": "7f5a8bd2-091e-4878-bb36-54115efb5b7a",
             "name": "Bài 34: Luyện tập",
             "order": 21,
-            "updatedAt": "2025-05-23T19:08:16.903951"
+            "updatedAt": "2025-05-26T07:52:07.578015"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903960",
+            "createdAt": "2025-04-22T07:52:07.578029",
             "description": "Bài học: Bài 35: Luyện tập chung",
-            "id": "0b630dd0-93d9-49c2-a767-b36a43af0ca7",
+            "id": "cf74cdd7-3f8e-4b9b-8b29-14672a2f3b50",
             "name": "Bài 35: Luyện tập chung",
             "order": 22,
-            "updatedAt": "2025-05-23T19:08:16.903962"
+            "updatedAt": "2025-05-26T07:52:07.578031"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903971",
+            "createdAt": "2025-04-22T07:52:07.578044",
             "description": "Bài học: Bài 36: Em ôn lại những gì đã học",
-            "id": "4cea5b45-1d8c-42bf-bd32-f1fdac81f43e",
+            "id": "93464648-08bf-40c7-aef9-0875f39ac43f",
             "name": "Bài 36: Em ôn lại những gì đã học",
             "order": 23,
-            "updatedAt": "2025-05-23T19:08:16.903973"
+            "updatedAt": "2025-05-26T07:52:07.578046"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903982",
+            "createdAt": "2025-04-22T07:52:07.578060",
             "description": "Bài học: Bài 37: Ôn tập",
-            "id": "f56c80a2-7df6-4d03-a945-3ae63d770b5f",
+            "id": "89e7393a-9ffd-4d04-b8ae-eab1a46a331a",
             "name": "Bài 37: Ôn tập",
             "order": 24,
-            "updatedAt": "2025-05-23T19:08:16.903984"
+            "updatedAt": "2025-05-26T07:52:07.578062"
         },
         {
             "chapter_name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "createdAt": "2025-04-19T19:08:16.903993",
+            "createdAt": "2025-04-22T07:52:07.578074",
             "description": "Bài học: Bài 38: Ôn tập",
-            "id": "d6259a81-081e-4f58-89dc-bb0e36c49740",
+            "id": "f66f0dd9-3db9-47c4-86bd-31ef6426b35c",
             "name": "Bài 38: Ôn tập",
             "order": 25,
-            "updatedAt": "2025-05-23T19:08:16.903994"
+            "updatedAt": "2025-05-26T07:52:07.578076"
         },
         {
             "chapter_name": "Chương 3: Các số trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904011",
+            "createdAt": "2025-04-22T07:52:07.578098",
             "description": "Bài học: Bài 39: Các số 11, 12, 13, 14, 15, 16",
-            "id": "5e179cf3-6438-4091-90ec-15a427cec914",
+            "id": "99128920-feaa-426b-a725-8177e9a701b3",
             "name": "Bài 39: Các số 11, 12, 13, 14, 15, 16",
             "order": 1,
-            "updatedAt": "2025-05-23T19:08:16.904013"
+            "updatedAt": "2025-05-26T07:52:07.578101"
         },
         {
             "chapter_name": "Chương 3: Các số trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904021",
+            "createdAt": "2025-04-22T07:52:07.578113",
             "description": "Bài học: Bài 40: Các số 17, 18, 19, 20",
-            "id": "d4c55b5b-0776-4c2c-8436-91a12a4896cf",
+            "id": "d1bfd5b8-8c98-42b6-8adc-518cdbc3962e",
             "name": "Bài 40: Các số 17, 18, 19, 20",
             "order": 2,
-            "updatedAt": "2025-05-23T19:08:16.904023"
+            "updatedAt": "2025-05-26T07:52:07.578115"
         },
         {
             "chapter_name": "Chương 3: Các số trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904032",
+            "createdAt": "2025-04-22T07:52:07.578127",
             "description": "Bài học: Bài 41: Luyện tập",
-            "id": "03022f1c-60d8-4830-a773-abfaec15410e",
+            "id": "2a76b807-6ffc-46e9-84b7-2d73819ec079",
             "name": "Bài 41: Luyện tập",
             "order": 3,
-            "updatedAt": "2025-05-23T19:08:16.904034"
+            "updatedAt": "2025-05-26T07:52:07.578129"
         },
         {
             "chapter_name": "Chương 3: Các số trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904043",
+            "createdAt": "2025-04-22T07:52:07.578142",
             "description": "Bài học: Bài 42: Các số 10, 20, 30, 40, 50, 60, 70, 80, 90",
-            "id": "2c87c8c5-2f4c-4465-8f8b-37afd568d0fe",
+            "id": "56fd4606-3c1a-4ea0-9344-f24250fc487f",
             "name": "Bài 42: Các số 10, 20, 30, 40, 50, 60, 70, 80, 90",
             "order": 4,
-            "updatedAt": "2025-05-23T19:08:16.904045"
+            "updatedAt": "2025-05-26T07:52:07.578145"
         },
         {
             "chapter_name": "Chương 3: Các số trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904053",
+            "createdAt": "2025-04-22T07:52:07.578158",
             "description": "Bài học: Bài 43: Các số có hai chữ số (từ 21 đến 40)",
-            "id": "ca38221c-5894-44db-b3e8-e84b924334d6",
+            "id": "981dde09-4d8d-44c7-804d-59b844da72c8",
             "name": "Bài 43: Các số có hai chữ số (từ 21 đến 40)",
             "order": 5,
-            "updatedAt": "2025-05-23T19:08:16.904055"
+            "updatedAt": "2025-05-26T07:52:07.578160"
         },
         {
             "chapter_name": "Chương 3: Các số trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904063",
+            "createdAt": "2025-04-22T07:52:07.578174",
             "description": "Bài học: Bài 44: Các số có hai chữ số (từ 41 đến 70)",
-            "id": "c26260e7-7826-4a61-b1c7-83c0a7c72860",
+            "id": "726ef6cb-fbe7-49a7-a745-29cdee7f0b72",
             "name": "Bài 44: Các số có hai chữ số (từ 41 đến 70)",
             "order": 6,
-            "updatedAt": "2025-05-23T19:08:16.904066"
+            "updatedAt": "2025-05-26T07:52:07.578176"
         },
         {
             "chapter_name": "Chương 3: Các số trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904076",
+            "createdAt": "2025-04-22T07:52:07.578192",
             "description": "Bài học: Bài 45: Các số có hai chữ số (từ 71 đến 99)",
-            "id": "4057fb4c-a16e-4f4b-8798-84ad2e6c35b2",
+            "id": "7fd99f2b-79ac-4aea-9e11-c33209cd69d7",
             "name": "Bài 45: Các số có hai chữ số (từ 71 đến 99)",
             "order": 7,
-            "updatedAt": "2025-05-23T19:08:16.904078"
+            "updatedAt": "2025-05-26T07:52:07.578194"
         },
         {
             "chapter_name": "Chương 3: Các số trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904088",
+            "createdAt": "2025-04-22T07:52:07.578206",
             "description": "Bài học: Bài 46: Các số đến 100",
-            "id": "4d1352d7-aaed-451c-9eba-6ebd3d330696",
+            "id": "8c4d52ef-b754-4b81-8baa-4ebf3d99f9aa",
             "name": "Bài 46: Các số đến 100",
             "order": 8,
-            "updatedAt": "2025-05-23T19:08:16.904089"
+            "updatedAt": "2025-05-26T07:52:07.578208"
         },
         {
             "chapter_name": "Chương 3: Các số trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904098",
+            "createdAt": "2025-04-22T07:52:07.578220",
             "description": "Bài học: Bài 47: Chục và đơn vị",
-            "id": "44665002-d2c2-4e62-a6ce-09ed4febd476",
+            "id": "564c8dff-50b4-40cd-bb70-2fbfe370ed59",
             "name": "Bài 47: Chục và đơn vị",
             "order": 9,
-            "updatedAt": "2025-05-23T19:08:16.904099"
+            "updatedAt": "2025-05-26T07:52:07.578222"
         },
         {
             "chapter_name": "Chương 3: Các số trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904108",
+            "createdAt": "2025-04-22T07:52:07.578234",
             "description": "Bài học: Bài 48: Luyện tập",
-            "id": "189b17a2-739b-4d2f-8cfd-b7b3a021840c",
+            "id": "5cf1020b-c7b2-46c0-bd91-eafcc6bd3f14",
             "name": "Bài 48: Luyện tập",
             "order": 10,
-            "updatedAt": "2025-05-23T19:08:16.904110"
+            "updatedAt": "2025-05-26T07:52:07.578236"
         },
         {
             "chapter_name": "Chương 3: Các số trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904119",
+            "createdAt": "2025-04-22T07:52:07.578251",
             "description": "Bài học: Bài 49: So sánh các số trong phạm vi 100",
-            "id": "981e4bba-0697-4df5-a7cf-d624fb546194",
+            "id": "1e4bca4c-e638-40b9-a206-c12f8194625c",
             "name": "Bài 49: So sánh các số trong phạm vi 100",
             "order": 11,
-            "updatedAt": "2025-05-23T19:08:16.904121"
+            "updatedAt": "2025-05-26T07:52:07.578253"
         },
         {
             "chapter_name": "Chương 3: Các số trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904131",
+            "createdAt": "2025-04-22T07:52:07.578275",
             "description": "Bài học: Bài 50: Luyện tập",
-            "id": "1c37970e-9d6f-4034-9e30-ecc685fbb7ef",
+            "id": "7e496e8b-5fa7-4062-86fe-1927a2773532",
             "name": "Bài 50: Luyện tập",
             "order": 12,
-            "updatedAt": "2025-05-23T19:08:16.904133"
+            "updatedAt": "2025-05-26T07:52:07.578277"
         },
         {
             "chapter_name": "Chương 3: Các số trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904142",
+            "createdAt": "2025-04-22T07:52:07.578291",
             "description": "Bài học: Bài 51: Dài hơn - Ngắn hơn",
-            "id": "e0c8c3b3-7c50-4a53-92e3-ffb0f592450e",
+            "id": "d0357132-0924-45af-b149-f728cab9a63d",
             "name": "Bài 51: Dài hơn - Ngắn hơn",
             "order": 13,
-            "updatedAt": "2025-05-23T19:08:16.904144"
+            "updatedAt": "2025-05-26T07:52:07.578293"
         },
         {
             "chapter_name": "Chương 3: Các số trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904153",
+            "createdAt": "2025-04-22T07:52:07.578319",
             "description": "Bài học: Bài 52: Đo độ dài",
-            "id": "8a2bfd59-5610-4469-877d-56a112707570",
+            "id": "470e256e-3cc5-4dfb-82f5-96f0d2df2a17",
             "name": "Bài 52: Đo độ dài",
             "order": 14,
-            "updatedAt": "2025-05-23T19:08:16.904154"
+            "updatedAt": "2025-05-26T07:52:07.578321"
         },
         {
             "chapter_name": "Chương 3: Các số trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904163",
+            "createdAt": "2025-04-22T07:52:07.578334",
             "description": "Bài học: Bài 53: Xăng-ti-mét",
-            "id": "420d3eaf-c4ff-4134-8417-ebcd1f66213a",
+            "id": "2a00a863-68b3-4857-899f-e1c717d45a45",
             "name": "Bài 53: Xăng-ti-mét",
             "order": 15,
-            "updatedAt": "2025-05-23T19:08:16.904165"
+            "updatedAt": "2025-05-26T07:52:07.578336"
         },
         {
             "chapter_name": "Chương 3: Các số trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904175",
+            "createdAt": "2025-04-22T07:52:07.578352",
             "description": "Bài học: Bài 54: Em ôn lại những gì đã học",
-            "id": "4bd3fa9c-f96c-40e9-84b4-668321d8e67b",
+            "id": "6c2bff73-eeec-46de-8a18-602ffe56a460",
             "name": "Bài 54: Em ôn lại những gì đã học",
             "order": 16,
-            "updatedAt": "2025-05-23T19:08:16.904177"
+            "updatedAt": "2025-05-26T07:52:07.578354"
         },
         {
             "chapter_name": "Chương 4: Phép cộng, phép trừ trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904193",
+            "createdAt": "2025-04-22T07:52:07.578375",
             "description": "Bài học: Bài 56: Phép cộng dạng 14 + 3",
-            "id": "6556839d-38b2-4361-bc5c-a85ca401a2de",
+            "id": "3abaa79a-a420-4520-a7c7-cf3e4f39569a",
             "name": "Bài 56: Phép cộng dạng 14 + 3",
             "order": 1,
-            "updatedAt": "2025-05-23T19:08:16.904195"
+            "updatedAt": "2025-05-26T07:52:07.578377"
         },
         {
             "chapter_name": "Chương 4: Phép cộng, phép trừ trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904204",
+            "createdAt": "2025-04-22T07:52:07.578390",
             "description": "Bài học: Bài 57: Phép trừ dạng 17 - 2",
-            "id": "dd6dac55-d503-40d8-8b72-93f5d77ac286",
+            "id": "db1e2011-8a1a-4b4c-8946-0f06dfdc7d43",
             "name": "Bài 57: Phép trừ dạng 17 - 2",
             "order": 2,
-            "updatedAt": "2025-05-23T19:08:16.904206"
+            "updatedAt": "2025-05-26T07:52:07.578394"
         },
         {
             "chapter_name": "Chương 4: Phép cộng, phép trừ trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904215",
+            "createdAt": "2025-04-22T07:52:07.578407",
             "description": "Bài học: Bài 58: Luyện tập",
-            "id": "3ba77ed1-96a6-4c9c-b81e-90f8fc815be2",
+            "id": "a43f5441-e5d5-4d3c-9882-e796a0b41821",
             "name": "Bài 58: Luyện tập",
             "order": 3,
-            "updatedAt": "2025-05-23T19:08:16.904217"
+            "updatedAt": "2025-05-26T07:52:07.578409"
         },
         {
             "chapter_name": "Chương 4: Phép cộng, phép trừ trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904228",
+            "createdAt": "2025-04-22T07:52:07.578423",
             "description": "Bài học: Bài 59: Cộng, trừ các số tròn chục",
-            "id": "a0c77f6c-72eb-4de3-abeb-0fb991a57351",
+            "id": "e03e4e75-c71a-4536-b0a2-026ddf7b03ac",
             "name": "Bài 59: Cộng, trừ các số tròn chục",
             "order": 4,
-            "updatedAt": "2025-05-23T19:08:16.904230"
+            "updatedAt": "2025-05-26T07:52:07.578425"
         },
         {
             "chapter_name": "Chương 4: Phép cộng, phép trừ trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904239",
+            "createdAt": "2025-04-22T07:52:07.578439",
             "description": "Bài học: Bài 60: Phép cộng dạng 25 + 14",
-            "id": "e908c591-b551-461c-a79e-00a42574012c",
+            "id": "1abb17f8-5853-4150-81dd-69f44f0d0368",
             "name": "Bài 60: Phép cộng dạng 25 + 14",
             "order": 5,
-            "updatedAt": "2025-05-23T19:08:16.904241"
+            "updatedAt": "2025-05-26T07:52:07.578441"
         },
         {
             "chapter_name": "Chương 4: Phép cộng, phép trừ trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904251",
+            "createdAt": "2025-04-22T07:52:07.578453",
             "description": "Bài học: Bài 61: Phép cộng dạng 25 + 4, 25 + 40",
-            "id": "f4cd9bf8-2a51-43bb-adaf-941f6a64f432",
+            "id": "bb67f104-206c-43c3-843b-bd93f714d554",
             "name": "Bài 61: Phép cộng dạng 25 + 4, 25 + 40",
             "order": 6,
-            "updatedAt": "2025-05-23T19:08:16.904252"
+            "updatedAt": "2025-05-26T07:52:07.578455"
         },
         {
             "chapter_name": "Chương 4: Phép cộng, phép trừ trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904262",
+            "createdAt": "2025-04-22T07:52:07.578472",
             "description": "Bài học: Bài 62: Luyện tập",
-            "id": "7b3ec055-95c0-41ea-bd65-b19e1a37fb8e",
+            "id": "4946f31d-839c-47e4-b2af-b087d7dc61fc",
             "name": "Bài 62: Luyện tập",
             "order": 7,
-            "updatedAt": "2025-05-23T19:08:16.904264"
+            "updatedAt": "2025-05-26T07:52:07.578475"
         },
         {
             "chapter_name": "Chương 4: Phép cộng, phép trừ trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904274",
+            "createdAt": "2025-04-22T07:52:07.578489",
             "description": "Bài học: Bài 63: Phép trừ dạng 39 – 15",
-            "id": "e28f67b6-1556-4130-a8e6-829a9ee9ff93",
+            "id": "4df7f20d-1f9e-4a4d-809e-3b941435243a",
             "name": "Bài 63: Phép trừ dạng 39 – 15",
             "order": 8,
-            "updatedAt": "2025-05-23T19:08:16.904275"
+            "updatedAt": "2025-05-26T07:52:07.578491"
         },
         {
             "chapter_name": "Chương 4: Phép cộng, phép trừ trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904285",
+            "createdAt": "2025-04-22T07:52:07.578506",
             "description": "Bài học: Bài 64: Phép trừ dạng 27 – 4, 63 – 40",
-            "id": "45ee6a13-72a2-4630-a4a3-e53dc1d6c5ca",
+            "id": "21e36190-7845-4f62-86f2-825bb4526c38",
             "name": "Bài 64: Phép trừ dạng 27 – 4, 63 – 40",
             "order": 9,
-            "updatedAt": "2025-05-23T19:08:16.904287"
+            "updatedAt": "2025-05-26T07:52:07.578508"
         },
         {
             "chapter_name": "Chương 4: Phép cộng, phép trừ trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904297",
+            "createdAt": "2025-04-22T07:52:07.578526",
             "description": "Bài học: Bài 65: Luyện tập",
-            "id": "55ac41b8-b90b-43e9-9fe4-f91087c17bc7",
+            "id": "091ab783-1bb6-442c-8fda-a56dfe053b6a",
             "name": "Bài 65: Luyện tập",
             "order": 10,
-            "updatedAt": "2025-05-23T19:08:16.904299"
+            "updatedAt": "2025-05-26T07:52:07.578528"
         },
         {
             "chapter_name": "Chương 4: Phép cộng, phép trừ trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904309",
+            "createdAt": "2025-04-22T07:52:07.578541",
             "description": "Bài học: Bài 66: Luyện tập chung",
-            "id": "1b3179ac-d92b-4726-952e-93f30e1ab641",
+            "id": "204c76e3-2cb5-4951-98dc-85d7e20dc112",
             "name": "Bài 66: Luyện tập chung",
             "order": 11,
-            "updatedAt": "2025-05-23T19:08:16.904311"
+            "updatedAt": "2025-05-26T07:52:07.578544"
         },
         {
             "chapter_name": "Chương 4: Phép cộng, phép trừ trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904322",
+            "createdAt": "2025-04-22T07:52:07.578556",
             "description": "Bài học: Bài 67: Các ngày trong tuần lễ",
-            "id": "27c7d61f-4683-4bd0-9759-1bae7c715b74",
+            "id": "cf7d3f6a-913b-4378-b495-0e785daa7f28",
             "name": "Bài 67: Các ngày trong tuần lễ",
             "order": 12,
-            "updatedAt": "2025-05-23T19:08:16.904323"
+            "updatedAt": "2025-05-26T07:52:07.578560"
         },
         {
             "chapter_name": "Chương 4: Phép cộng, phép trừ trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904333",
+            "createdAt": "2025-04-22T07:52:07.578575",
             "description": "Bài học: Bài 68: Đồng hồ - thời gian",
-            "id": "0b0c3f19-a67e-4ecc-b8ad-6cac0d2c668e",
+            "id": "a7d93e9e-0ee9-41ac-b166-1e4c60b404a3",
             "name": "Bài 68: Đồng hồ - thời gian",
             "order": 13,
-            "updatedAt": "2025-05-23T19:08:16.904335"
+            "updatedAt": "2025-05-26T07:52:07.578577"
         },
         {
             "chapter_name": "Chương 4: Phép cộng, phép trừ trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904345",
+            "createdAt": "2025-04-22T07:52:07.578591",
             "description": "Bài học: Bài 69: Ôn lại những gì đã học",
-            "id": "ffbdcb4b-4859-4467-8782-750851a95ec1",
+            "id": "5870e88b-2484-48d0-bf62-7a675f08c06b",
             "name": "Bài 69: Ôn lại những gì đã học",
             "order": 14,
-            "updatedAt": "2025-05-23T19:08:16.904347"
+            "updatedAt": "2025-05-26T07:52:07.578593"
         },
         {
             "chapter_name": "Chương 4: Phép cộng, phép trừ trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904357",
+            "createdAt": "2025-04-22T07:52:07.578607",
             "description": "Bài học: Bài 70: Ôn tập các số trong phạm vi 10",
-            "id": "82e063e8-e56f-4089-88b6-45ac7d768f0d",
+            "id": "eba6a3d0-6852-4107-8c14-38cad7685743",
             "name": "Bài 70: Ôn tập các số trong phạm vi 10",
             "order": 15,
-            "updatedAt": "2025-05-23T19:08:16.904359"
+            "updatedAt": "2025-05-26T07:52:07.578619"
         },
         {
             "chapter_name": "Chương 4: Phép cộng, phép trừ trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904370",
+            "createdAt": "2025-04-22T07:52:07.578639",
             "description": "Bài học: Ôn tập Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "id": "dac4b1ee-0082-4946-8db7-5e9d60bb6f28",
+            "id": "b2d4ee68-b4b5-486c-84b0-46cde451a29e",
             "name": "Ôn tập Chương 2: Phép cộng, phép trừ trong phạm vi 10",
             "order": 16,
-            "updatedAt": "2025-05-23T19:08:16.904372"
+            "updatedAt": "2025-05-26T07:52:07.578641"
         },
         {
             "chapter_name": "Chương 4: Phép cộng, phép trừ trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904388",
+            "createdAt": "2025-04-22T07:52:07.578659",
             "description": "Bài học: Ôn tập Chương 4: Phép cộng, phép trừ trong phạm vi 100",
-            "id": "fe370b99-a452-4e6f-b0b2-84b0c1b9fc75",
+            "id": "11fed82d-4ec8-4acd-860c-9381f67bdaf8",
             "name": "Ôn tập Chương 4: Phép cộng, phép trừ trong phạm vi 100",
             "order": 17,
-            "updatedAt": "2025-05-23T19:08:16.904390"
+            "updatedAt": "2025-05-26T07:52:07.578661"
         },
         {
             "chapter_name": "Chương 4: Phép cộng, phép trừ trong phạm vi 100",
-            "createdAt": "2025-04-19T19:08:16.904402",
+            "createdAt": "2025-04-22T07:52:07.578676",
             "description": "Bài học: Ôn tập về thời gian",
-            "id": "42d27eb6-cb73-406c-9042-f51cc0693f7b",
+            "id": "6e5cd5ec-0333-4df3-9952-0954e2e151f3",
             "name": "Ôn tập về thời gian",
             "order": 18,
-            "updatedAt": "2025-05-23T19:08:16.904404"
+            "updatedAt": "2025-05-26T07:52:07.578678"
         }
     ],
     "success": true

@@ -7,6 +7,9 @@ Xóa toàn bộ dữ liệu trong Neo4j database
 
 import os
 from neo4j import GraphDatabase
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def clear_neo4j_database():
     """Xóa toàn bộ dữ liệu trong Neo4j database"""
@@ -15,7 +18,7 @@ def clear_neo4j_database():
     uri = os.getenv("NEO4J_URI")
     username = os.getenv("NEO4J_USERNAME") 
     password = os.getenv("NEO4J_PASSWORD")
-    
+    print(uri, username, password)
     if not all([uri, username, password]):
         print("❌ Thiếu thông tin kết nối Neo4j!")
         print("Vui lòng thiết lập các biến môi trường:")

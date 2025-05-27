@@ -13,6 +13,9 @@ from datetime import datetime, timedelta
 from neo4j import GraphDatabase
 import random
 import sys
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class Neo4jEducationImporter:
     def __init__(self, json_file_path="toan-lop1-canh-dieu.json"):

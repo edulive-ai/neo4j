@@ -10,6 +10,9 @@ import uuid
 from datetime import datetime
 from neo4j import GraphDatabase
 import logging
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)

@@ -1,40 +1,40 @@
 {
     "chapters": [
         {
-            "createdAt": "2025-04-14T19:08:16.903569",
+            "createdAt": "2025-04-17T07:52:07.577506",
             "description": "Chương học: Chương 1: Các số đến 10",
-            "id": "6158ba08-1b8b-4617-a00c-d432fc1adc41",
+            "id": "98c280de-7e2b-4d45-8dac-1e9f9a7f245e",
             "name": "Chương 1: Các số đến 10",
             "order": 1,
             "typebook_name": "Cánh Diều",
-            "updatedAt": "2025-05-23T19:08:16.903582"
+            "updatedAt": "2025-05-26T07:52:07.577530"
         },
         {
-            "createdAt": "2025-04-14T19:08:16.903728",
+            "createdAt": "2025-04-17T07:52:07.577716",
             "description": "Chương học: Chương 2: Phép cộng, phép trừ trong phạm vi 10",
-            "id": "a150101f-95b5-402d-961c-b77fc0236967",
+            "id": "a8c7e09c-796f-463e-b199-6863ec9ce2e3",
             "name": "Chương 2: Phép cộng, phép trừ trong phạm vi 10",
             "order": 2,
             "typebook_name": "Cánh Diều",
-            "updatedAt": "2025-05-23T19:08:16.903730"
+            "updatedAt": "2025-05-26T07:52:07.577719"
         },
         {
-            "createdAt": "2025-04-14T19:08:16.904002",
+            "createdAt": "2025-04-17T07:52:07.578086",
             "description": "Chương học: Chương 3: Các số trong phạm vi 100",
-            "id": "59de2c80-3541-48f6-9fb3-5c6dd4138946",
+            "id": "e2fe18ce-733d-4204-87c1-c517ba4144ac",
             "name": "Chương 3: Các số trong phạm vi 100",
             "order": 3,
             "typebook_name": "Cánh Diều",
-            "updatedAt": "2025-05-23T19:08:16.904003"
+            "updatedAt": "2025-05-26T07:52:07.578088"
         },
         {
-            "createdAt": "2025-04-14T19:08:16.904184",
+            "createdAt": "2025-04-17T07:52:07.578363",
             "description": "Chương học: Chương 4: Phép cộng, phép trừ trong phạm vi 100",
-            "id": "42235067-8107-4468-a130-97067e7bda1f",
+            "id": "5c8764cb-1a07-4262-a362-9082e37a6181",
             "name": "Chương 4: Phép cộng, phép trừ trong phạm vi 100",
             "order": 4,
             "typebook_name": "Cánh Diều",
-            "updatedAt": "2025-05-23T19:08:16.904185"
+            "updatedAt": "2025-05-26T07:52:07.578365"
         }
     ],
     "count": 4,
