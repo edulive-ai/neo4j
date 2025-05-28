@@ -1580,6 +1580,410 @@ def get_multiple_students_detailed():
         'filter_info': filter_info,
         'success': True
     })
+# ==================== SIMPLIFIED TEST SYSTEM APIs ====================
+@app.route('/api/v1/tests/complete-simple', methods=['POST'])
+@handle_errors
+@validate_json
+def create_simple_test():
+    """Tạo bài test đơn giản - chỉ cần question, answer, student_answer, is_correct"""
+    data = request.get_json()
+    
+    # Validate required fields - đơn giản hóa
+    required_fields = ['title', 'description', 'user_id', 'questions']
+    if not all(field in data for field in required_fields):
+        return jsonify({'error': f'Required fields: {required_fields}', 'success': False}), 400
+    
+    if not isinstance(data['questions'], list) or len(data['questions']) == 0:
+        return jsonify({'error': 'questions must be a non-empty array', 'success': False}), 400
+    
+    # Validate questions structure - chỉ cần 4 field cơ bản + images (optional)
+    for i, q in enumerate(data['questions']):
+        required_q_fields = ['question', 'answer', 'student_answer', 'is_correct']
+        if not all(field in q for field in required_q_fields):
+            return jsonify({'error': f'Question {i}: Missing {required_q_fields}', 'success': False}), 400
+    
+    with neo4j_api.driver.session() as session:
+        with session.begin_transaction() as tx:
+            try:
+                # 1. Kiểm tra user có tồn tại
+                user_check = tx.run("MATCH (u:User {id: $user_id}) RETURN u", user_id=data['user_id'])
+                user_record = user_check.single()
+                if not user_record:
+                    return jsonify({'error': 'User not found', 'success': False}), 404
+                
+                user_info = dict(user_record["u"].items())
+                
+                # 2. Tạo Test
+                test_id = str(uuid.uuid4())
+                now = datetime.now().isoformat()
+                
+                test_data = {
+                    'id': test_id,
+                    'title': data['title'],
+                    'description': data['description'],
+                    'user_id': data['user_id'],
+                    'duration_minutes': data.get('duration_minutes', 60),
+                    'status': 'completed',
+                    'start_time': data.get('start_time', now),
+                    'end_time': now,
+                    'createdAt': now,
+                    'updatedAt': now
+                }
+                
+                tx.run("""
+                    CREATE (t:Test {
+                        id: $id, title: $title, description: $description, 
+                        user_id: $user_id, duration_minutes: $duration_minutes, status: $status,
+                        start_time: $start_time, end_time: $end_time,
+                        createdAt: $createdAt, updatedAt: $updatedAt
+                    })
+                """, test_data)
+                
+                # 3. Tạo relationship User-[:TOOK]->Test
+                tx.run("""
+                    MATCH (u:User {id: $user_id})
+                    MATCH (t:Test {id: $test_id})
+                    CREATE (u)-[:TOOK]->(t)
+                """, user_id=data['user_id'], test_id=test_id)
+                
+                # 4. Tạo Questions và TestAnswers - SIMPLIFIED
+                created_questions = []
+                created_answers = []
+                total_score = 0
+                max_possible_score = 0
+                
+                for i, question_data in enumerate(data['questions']):
+                    # Tạo Question mới - có images
+                    question_id = str(uuid.uuid4())
+                    question_db_data = {
+                        'id': question_id,
+                        'content': question_data['question'],  # nội dung câu hỏi
+                        'correct_answer': question_data['answer'],  # đáp án đúng
+                        'image_question': question_data.get('image_question', ''),
+                        'image_answer': question_data.get('image_answer', ''),
+                        'difficulty': question_data.get('difficulty', 'medium'),
+                        'order': i + 1,
+                        'createdAt': now,
+                        'updatedAt': now
+                    }
+                    
+                    # Tạo Question node - có images
+                    tx.run("""
+                        CREATE (q:Question {
+                            id: $id, content: $content, correct_answer: $correct_answer,
+                            image_question: $image_question, image_answer: $image_answer,
+                            difficulty: $difficulty, order: $order, 
+                            createdAt: $createdAt, updatedAt: $updatedAt
+                        })
+                    """, question_db_data)
+                    
+                    # Tạo relationship: Test -[:CONTAINS_QUESTION]-> Question
+                    points = question_data.get('points', 1)
+                    tx.run("""
+                        MATCH (t:Test {id: $test_id})
+                        MATCH (q:Question {id: $question_id})
+                        CREATE (t)-[:CONTAINS_QUESTION {
+                            order: $order,
+                            points: $points,
+                            addedAt: $addedAt
+                        }]->(q)
+                    """, 
+                    test_id=test_id, 
+                    question_id=question_id,
+                    order=i + 1,
+                    points=points,
+                    addedAt=now
+                    )
+                    
+                    created_questions.append(question_db_data)
+                    
+                    # Tạo TestAnswer - SIMPLIFIED
+                    answer_id = str(uuid.uuid4())
+                    max_possible_score += points
+                    
+                    answer_data = {
+                        'id': answer_id,
+                        'student_answer': question_data['student_answer'],
+                        'is_correct': question_data['is_correct'],
+                        'answered_at': now,
+                        'duration_seconds': question_data.get('duration_seconds', 0),
+                        'createdAt': now,
+                        'updatedAt': now
+                    }
+                    
+                    if question_data['is_correct']:
+                        total_score += points
+                    
+                    # Tạo TestAnswer node
+                    tx.run("""
+                        CREATE (ta:TestAnswer {
+                            id: $id, student_answer: $student_answer, is_correct: $is_correct,
+                            answered_at: $answered_at, duration_seconds: $duration_seconds,
+                            createdAt: $createdAt, updatedAt: $updatedAt
+                        })
+                    """, answer_data)
+                    
+                    # Tạo relationship: Question -[:HAS_ANSWER]-> TestAnswer  
+                    tx.run("""
+                        MATCH (q:Question {id: $question_id})
+                        MATCH (ta:TestAnswer {id: $answer_id})
+                        CREATE (q)-[:HAS_ANSWER {
+                            points: $points,
+                            answeredAt: $answeredAt
+                        }]->(ta)
+                    """, 
+                    question_id=question_id, 
+                    answer_id=answer_id,
+                    points=points,
+                    answeredAt=now
+                    )
+                    
+                    # Kết hợp thông tin cho response
+                    answer_data['question_info'] = question_db_data
+                    answer_data['points'] = points
+                    created_answers.append(answer_data)
+                
+                # 5. Cập nhật điểm số cho Test
+                tx.run("""
+                    MATCH (t:Test {id: $test_id})
+                    SET t.total_score = $total_score,
+                        t.max_possible_score = $max_possible_score,
+                        t.total_questions = $total_questions,
+                        t.correct_answers = $correct_answers,
+                        t.accuracy_percentage = $accuracy_percentage,
+                        t.updatedAt = $updatedAt
+                """, 
+                test_id=test_id,
+                total_score=total_score,
+                max_possible_score=max_possible_score,
+                total_questions=len(data['questions']),
+                correct_answers=len([q for q in data['questions'] if q['is_correct']]),
+                accuracy_percentage=round(total_score / max_possible_score * 100, 2) if max_possible_score > 0 else 0,
+                updatedAt=now
+                )
+                
+                tx.commit()
+                
+                # Response data - SIMPLIFIED
+                test_result = {
+                    'test': test_data,
+                    'questions': created_questions,
+                    'answers': created_answers,
+                    'user': user_info,
+                    'summary': {
+                        'total_questions': len(data['questions']),
+                        'correct_answers': len([q for q in data['questions'] if q['is_correct']]),
+                        'total_score': f"{total_score}/{max_possible_score}",
+                        'accuracy_percentage': round(total_score / max_possible_score * 100, 2) if max_possible_score > 0 else 0,
+                        'completion_time': now
+                    }
+                }
+                
+            except Exception as e:
+                tx.rollback()
+                return jsonify({'error': f'Transaction failed: {str(e)}', 'success': False}), 500
+    
+    return jsonify({
+        'message': 'Simple test created successfully',
+        'result': test_result,
+        'success': True
+    }), 201
+
+@app.route('/api/v1/users/<user_id>/test-history-minimal', methods=['GET'])
+@handle_errors
+def get_user_minimal_test_history(user_id):
+    """Lấy lịch sử test với cấu trúc tối giản - không có chapter/lessons/page"""
+    with neo4j_api.driver.session() as session:
+        # Kiểm tra user có tồn tại
+        user_check = session.run("MATCH (u:User {id: $user_id}) RETURN u", user_id=user_id)
+        user_record = user_check.single()
+        if not user_record:
+            return jsonify({'error': 'User not found', 'success': False}), 404
+        
+        user_info = dict(user_record["u"].items())
+        
+        # Lấy tất cả test với cấu trúc minimal
+        tests_result = session.run("""
+            MATCH (u:User {id: $user_id})-[:TOOK]->(t:Test)
+            RETURN t
+            ORDER BY t.createdAt DESC
+        """, user_id=user_id)
+        
+        test_history = []
+        
+        for test_record in tests_result:
+            test = dict(test_record["t"].items())
+            
+            # Lấy questions và answers với cấu trúc minimal
+            qa_result = session.run("""
+                MATCH (t:Test {id: $test_id})-[:CONTAINS_QUESTION]->(q:Question)-[:HAS_ANSWER]->(a:TestAnswer)
+                RETURN q, a
+                ORDER BY q.order
+            """, test_id=test['id'])
+            
+            questions_and_answers = []
+            correct_count = 0
+            total_questions = 0
+            
+            for qa_record in qa_result:
+                question = dict(qa_record["q"].items())
+                answer = dict(qa_record["a"].items())
+                
+                qa_item = {
+                    'question': {
+                        'id': question['id'],
+                        'content': question['content'],
+                        'correct_answer': question['correct_answer'],
+                        'image_question': question.get('image_question', ''),
+                        'image_answer': question.get('image_answer', ''),
+                        'difficulty': question.get('difficulty', 'medium')
+                    },
+                    'answer': {
+                        'id': answer['id'],
+                        'student_answer': answer['student_answer'],
+                        'is_correct': answer['is_correct'],
+                        'answered_at': answer['answered_at'],
+                        'duration_seconds': answer['duration_seconds']
+                    }
+                }
+                
+                questions_and_answers.append(qa_item)
+                total_questions += 1
+                if answer['is_correct']:
+                    correct_count += 1
+            
+            # Test info minimal
+            test_item = {
+                'test': {
+                    'id': test['id'],
+                    'title': test['title'],
+                    'description': test['description'],
+                    'start_time': test.get('start_time'),
+                    'end_time': test.get('end_time'),
+                    'status': test.get('status', 'completed'),
+                    'created_at': test['createdAt']
+                },
+                'questions_and_answers': questions_and_answers,
+                'summary': {
+                    'total_questions': total_questions,
+                    'correct_answers': correct_count,
+                    'wrong_answers': total_questions - correct_count,
+                    'accuracy_percentage': round(correct_count / total_questions * 100, 1) if total_questions > 0 else 0
+                }
+            }
+            
+            test_history.append(test_item)
+    
+    return jsonify({
+        'user': {
+            'id': user_info['id'],
+            'name': user_info['name'],
+            'email': user_info['email']
+        },
+        'test_history': test_history,
+        'total_tests': len(test_history),
+        'success': True
+    })
+@app.route('/api/v1/tests/<test_id>/details-simple', methods=['GET'])
+@handle_errors
+def get_simple_test_details(test_id):
+    """Lấy chi tiết đơn giản của một bài test cụ thể - không có chapter/lessons"""
+    with neo4j_api.driver.session() as session:
+        # Lấy thông tin test và user
+        test_result = session.run("""
+            MATCH (u:User)-[:TOOK]->(t:Test {id: $test_id})
+            RETURN t, u
+        """, test_id=test_id)
+        
+        test_record = test_result.single()
+        if not test_record:
+            return jsonify({'error': 'Test not found', 'success': False}), 404
+        
+        test = dict(test_record["t"].items())
+        user = dict(test_record["u"].items())
+        
+        # Lấy tất cả câu trả lời với cấu trúc đơn giản
+        answers_result = session.run("""
+            MATCH (u:User)-[:TOOK]->(t:Test {id: $test_id})-[:CONTAINS_QUESTION]->(q:Question)-[:HAS_ANSWER]->(ta:TestAnswer)
+            RETURN ta, q
+            ORDER BY q.order
+        """, test_id=test_id)
+        
+        detailed_answers = []
+        for record in answers_result:
+            answer = dict(record["ta"].items())
+            question = dict(record["q"].items())
+            
+            answer_detail = {
+                'question': {
+                    'id': question['id'],
+                    'content': question['content'],
+                    'correct_answer': question['correct_answer'],
+                    'image_question': question.get('image_question', ''),
+                    'image_answer': question.get('image_answer', ''),
+                    'difficulty': question.get('difficulty', 'medium'),
+                    'order': question['order']
+                },
+                'answer': {
+                    'id': answer['id'],
+                    'student_answer': answer['student_answer'],
+                    'is_correct': answer['is_correct'],
+                    'answered_at': answer['answered_at'],
+                    'duration_seconds': answer['duration_seconds']
+                }
+            }
+            detailed_answers.append(answer_detail)
+        
+        # Tính thống kê đơn giản
+        total_questions = len(detailed_answers)
+        correct_answers = len([a for a in detailed_answers if a['answer']['is_correct']])
+        wrong_answers = total_questions - correct_answers
+        
+        # Phân tích theo độ khó
+        difficulty_analysis = {}
+        for answer_detail in detailed_answers:
+            difficulty = answer_detail['question'].get('difficulty', 'medium')
+            if difficulty not in difficulty_analysis:
+                difficulty_analysis[difficulty] = {'total': 0, 'correct': 0, 'wrong': 0}
+            difficulty_analysis[difficulty]['total'] += 1
+            if answer_detail['answer']['is_correct']:
+                difficulty_analysis[difficulty]['correct'] += 1
+            else:
+                difficulty_analysis[difficulty]['wrong'] += 1
+        
+        # Thêm tỷ lệ cho mỗi độ khó
+        for difficulty in difficulty_analysis:
+            analysis = difficulty_analysis[difficulty]
+            analysis['accuracy_rate'] = round(analysis['correct'] / analysis['total'] * 100, 2)
+    
+    return jsonify({
+        'test': {
+            'id': test['id'],
+            'title': test['title'],
+            'description': test['description'],
+            'start_time': test.get('start_time'),
+            'end_time': test.get('end_time'),
+            'status': test.get('status', 'completed'),
+            'created_at': test['createdAt']
+        },
+        'user': {
+            'id': user['id'],
+            'name': user['name'],
+            'email': user['email']
+        },
+        'questions_and_answers': detailed_answers,
+        'summary': {
+            'total_questions': total_questions,
+            'correct_answers': correct_answers,
+            'wrong_answers': wrong_answers,
+            'accuracy_rate': round(correct_answers / total_questions * 100, 2) if total_questions > 0 else 0,
+            'total_time_spent': sum(a['answer']['duration_seconds'] for a in detailed_answers),
+            'avg_time_per_question': round(sum(a['answer']['duration_seconds'] for a in detailed_answers) / len(detailed_answers), 2) if detailed_answers else 0
+        },
+        'difficulty_analysis': difficulty_analysis,
+        'success': True
+    }), 201
+
 # ==================== API DOCUMENTATION ====================
 
 @app.route('/', methods=['GET'])

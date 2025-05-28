@@ -14,6 +14,7 @@
 Subject → TypeBook → Chapter → Lesson → Question
 User → Answer → Question
 User → Knowledge (learning progress)
+User → Test → Question → TestAnswer (Test System)
 ```
 
 ---
@@ -75,6 +76,156 @@ Content-Type: application/json
 
 **Required in each user**: `name`, `email`  
 **Optional**: `age`, `batch_size` (default: 1000)
+
+---
+
+## 🧪 Test System (New)
+
+### Create Complete Test
+Create a test with questions and answers in one API call.
+
+```bash
+POST /api/v1/tests/complete-simple
+Content-Type: application/json
+
+{
+  "title": "Bài kiểm tra Toán đơn giản",
+  "description": "Bài test cơ bản",
+  "user_id": "511f5100-1c1a-4018-8ce1-ae3cbb0fcc9e",
+  "duration_minutes": 30,
+  "questions": [
+    {
+      "question": "2 + 3 bằng bao nhiêu?",
+      "answer": "5",
+      "image_question": "images/math1.png",
+      "image_answer": "",
+      "student_answer": "5",
+      "is_correct": true,
+      "points": 1,
+      "difficulty": "easy",
+      "duration_seconds": 30
+    },
+    {
+      "question": "Đếm số lượng quả táo trong hình?",
+      "answer": "4 quả táo",
+      "image_question": "images/apples.jpg",
+      "image_answer": "images/answer.jpg",
+      "student_answer": "3 quả",
+      "is_correct": false,
+      "points": 2,
+      "difficulty": "medium",
+      "duration_seconds": 45
+    }
+  ]
+}
+```
+
+**Required fields**:
+- `title`, `description`, `user_id`, `questions`
+- **Per question**: `question`, `answer`, `student_answer`, `is_correct`
+
+**Optional fields**:
+- `duration_minutes` (default: 60)
+- **Per question**: `image_question`, `image_answer`, `points` (default: 1), `difficulty` (default: "medium"), `duration_seconds` (default: 0)
+
+**Response**: Complete test with questions, answers, and summary statistics.
+
+### Get User Test History (Simple)
+Get complete test history for a student with minimal structure.
+
+```bash
+GET /api/v1/users/{user_id}/test-history-minimal
+```
+
+**Example**:
+```bash
+GET /api/v1/users/511f5100-1c1a-4018-8ce1-ae3cbb0fcc9e/test-history-minimal
+```
+
+**Response structure**:
+```json
+{
+  "user": {
+    "id": "user-id",
+    "name": "Student Name",
+    "email": "email@example.com"
+  },
+  "test_history": [
+    {
+      "test": {
+        "id": "test-id",
+        "title": "Test Title",
+        "description": "Test Description",
+        "start_time": "2024-01-01T10:00:00",
+        "end_time": "2024-01-01T10:30:00",
+        "status": "completed",
+        "created_at": "2024-01-01T10:00:00"
+      },
+      "questions_and_answers": [
+        {
+          "question": {
+            "id": "q1",
+            "content": "Question content",
+            "correct_answer": "Correct answer",
+            "image_question": "images/q1.png",
+            "image_answer": "images/a1.png",
+            "difficulty": "easy"
+          },
+          "answer": {
+            "id": "a1",
+            "student_answer": "Student answer",
+            "is_correct": true,
+            "answered_at": "2024-01-01T10:05:00",
+            "duration_seconds": 45
+          }
+        }
+      ],
+      "summary": {
+        "total_questions": 5,
+        "correct_answers": 3,
+        "wrong_answers": 2,
+        "accuracy_percentage": 60.0
+      }
+    }
+  ],
+  "total_tests": 1,
+  "success": true
+}
+```
+
+### Get Test Details (Simple)
+Get detailed information for a specific test.
+
+```bash
+GET /api/v1/tests/{test_id}/details-simple
+```
+
+**Example**:
+```bash
+GET /api/v1/tests/test-uuid-here/details-simple
+```
+
+**Response**: Detailed test info with questions, answers, summary statistics, and difficulty analysis.
+
+### Search Tests
+Search tests with various criteria.
+
+```bash
+GET /api/v1/tests/search?user_id={user_id}&title={search_term}&from_date={date}&to_date={date}&min_score={score}&max_score={score}
+```
+
+**Parameters**:
+- `user_id`: Filter by specific user
+- `title`: Search in test titles
+- `from_date`: Start date (YYYY-MM-DD)
+- `to_date`: End date (YYYY-MM-DD)  
+- `min_score`: Minimum accuracy percentage
+- `max_score`: Maximum accuracy percentage
+
+**Example**:
+```bash
+GET /api/v1/tests/search?user_id=511f5100-1c1a-4018-8ce1-ae3cbb0fcc9e&title=Toán&min_score=60
+```
 
 ---
 
@@ -378,39 +529,46 @@ GET /api/v1/export
 
 ---
 
-## 🔧 Configuration
-
-### Environment Variables
-```bash
-NEO4J_URI=neo4j://14.232.211.211:17687
-NEO4J_USERNAME=neo4j
-NEO4J_PASSWORD=OPGk80GA26Q4
-PORT=5000
-DEBUG=True
-```
-
-### Test Connection
-```python
-import os
-from neo4j import GraphDatabase
-
-driver = GraphDatabase.driver(
-    "neo4j://14.232.211.211:17687",
-    auth=("neo4j", "OPGk80GA26Q4")
-)
-
-with driver.session() as session:
-    result = session.run("RETURN 'Connected!' as message")
-    print(result.single()["message"])
-
-driver.close()
-```
-
----
-
 ## 🚀 Quick Start Examples
 
-### 1. Complete Learning Workflow
+### 1. Complete Test Workflow (New)
+```bash
+# 1. Create a simple test with questions and answers
+POST /api/v1/tests/complete-simple
+{
+  "title": "Bài kiểm tra Toán",
+  "description": "Test cơ bản",
+  "user_id": "student-uuid",
+  "questions": [
+    {
+      "question": "2 + 3 = ?",
+      "answer": "5",
+      "student_answer": "5",
+      "is_correct": true,
+      "points": 1
+    },
+    {
+      "question": "Đếm quả táo?",
+      "answer": "4 quả",
+      "image_question": "images/apples.jpg",
+      "student_answer": "3 quả",
+      "is_correct": false,
+      "points": 2
+    }
+  ]
+}
+
+# 2. Get student's test history
+GET /api/v1/users/student-uuid/test-history-minimal
+
+# 3. Get specific test details
+GET /api/v1/tests/test-uuid/details-simple
+
+# 4. Search tests
+GET /api/v1/tests/search?user_id=student-uuid&min_score=60
+```
+
+### 2. Complete Learning Workflow
 ```bash
 # 1. Get subjects
 GET /api/v1/subjects
@@ -434,7 +592,7 @@ POST /api/v1/answers/bulk
 GET /api/v1/students/student-uuid/detailed
 ```
 
-### 2. Knowledge Management
+### 3. Knowledge Management
 ```bash
 # 1. Get knowledge
 GET /api/v1/knowledge?subject=Toán&grade=Lớp 1
@@ -450,7 +608,7 @@ PUT /api/v1/users/student-uuid/knowledge/knowledge-uuid
 }
 ```
 
-### 3. Bulk Import
+### 4. Bulk Import
 ```bash
 # 1. Import users
 POST /api/v1/users/bulk
@@ -487,6 +645,36 @@ POST /api/v1/users/bulk/knowledge
     }
   ]
 }
+```
+
+---
+
+## 🔧 Configuration
+
+### Environment Variables
+```bash
+NEO4J_URI=neo4j://14.232.211.211:17687
+NEO4J_USERNAME=neo4j
+NEO4J_PASSWORD=OPGk80GA26Q4
+PORT=5000
+DEBUG=True
+```
+
+### Test Connection
+```python
+import os
+from neo4j import GraphDatabase
+
+driver = GraphDatabase.driver(
+    "neo4j://14.232.211.211:17687",
+    auth=("neo4j", "OPGk80GA26Q4")
+)
+
+with driver.session() as session:
+    result = session.run("RETURN 'Connected!' as message")
+    print(result.single()["message"])
+
+driver.close()
 ```
 
 ---
@@ -534,6 +722,24 @@ POST /api/v1/users/bulk/knowledge
 - `email` (required): Unique email
 - `age` (optional): Student age (default: 7)
 
+### Test Fields (New)
+- `title` (required): Test title
+- `description` (required): Test description
+- `user_id` (required): Student ID
+- `duration_minutes` (optional): Test duration (default: 60)
+- `questions` (required): Array of questions
+
+### Test Question Fields (New)
+- `question` (required): Question content
+- `answer` (required): Correct answer
+- `student_answer` (required): Student's response
+- `is_correct` (required): Boolean
+- `image_question` (optional): Question image URL
+- `image_answer` (optional): Answer image URL
+- `points` (optional): Points value (default: 1)
+- `difficulty` (optional): Difficulty level (default: "medium")
+- `duration_seconds` (optional): Time taken (default: 0)
+
 ### Question Fields
 - `lesson_id` (required): Must exist in database
 - `title` (required): Question title
@@ -566,4 +772,27 @@ POST /api/v1/users/bulk/knowledge
 
 ---
 
-*Last Updated: May 27, 2025*
+## 🏗️ Test System Architecture
+
+### Relationship Structure
+```
+User -[:TOOK]-> Test -[:CONTAINS_QUESTION]-> Question -[:HAS_ANSWER]-> TestAnswer
+```
+
+### Key Features
+- **Simple Test Creation**: One API call creates test + questions + answers
+- **Minimal Fields**: Only essential fields required
+- **Image Support**: Questions and answers can have images
+- **Complete History**: Easy access to all test data
+- **Flexible Search**: Search tests by multiple criteria
+- **Clean Structure**: No complex hierarchies, just question → answer
+
+### Differences from Regular Q&A System
+- **Test System**: Groups questions into tests, tracks test completion
+- **Regular Q&A**: Individual questions linked to lessons/chapters
+- **Use Test System**: For assessments, quizzes, exams
+- **Use Regular Q&A**: For practice, learning content exploration
+
+---
+
+*Last Updated: May 28, 2025*
